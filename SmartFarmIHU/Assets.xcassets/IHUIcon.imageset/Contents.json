@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "cropped-ihu-gr-logo-created17m519.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "cropped-ihu-gr-logo-created17m519 1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "cropped-ihu-gr-logo-created17m519 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
