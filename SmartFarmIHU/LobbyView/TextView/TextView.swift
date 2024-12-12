@@ -23,7 +23,7 @@ struct TextView: View {
             VStack {
                 HStack {
                     Text(AppTextConstants.TextViewListHeader)
-                        .foregroundColor(.green)
+                        .foregroundColor(Color.App.green)
                     Spacer()
                 }
                 

@@ -31,56 +31,60 @@ struct LobbyView: View {
                     .frame(width: 50, height: 50)
             })
             
-            Button(action: {
-                
-            }, label: {
-                Image(systemName: "magnifyingglass")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.black)
-                    .opacity(0.5)
-            })
+//            Button(action: {
+//                
+//            }, label: {
+//                Image(systemName: "magnifyingglass")
+//                    .resizable()
+//                    .frame(width: 30, height: 30)
+//                    .foregroundColor(.black)
+//                    .opacity(0.5)
+//            })
             
         }
         .padding(10)
         
         ScrollView {
             VStack {
-                
-                if dropDownmenu {
-                    DropDownMenuView()
+                Group {
+                    if dropDownmenu {
+                        //                    let menu = DropDownMenuView()
+                    }
+                    
+                    Image("MainPhoto")
+                        .resizable()
+                        .frame(width: 350, height: 300)
+                        .padding(.bottom)
+                    
+                    Text(AppTextConstants.LobbyHeader)
+                        .font(.headline)
+                        .foregroundColor(Color.App.green)
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Text(AppTextConstants.LobbyButton)
+                        
+                    })
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color.App.blue)
+                    .foregroundColor(.white)
+                    .buttonBorderShape(.roundedRectangle)
+                    
+                    Text(AppTextConstants.LobbyButtonSubTittle)
+                        .font(.headline)
+                        .foregroundColor(Color.App.green)
+                        .padding(.bottom)
+                    
+                    TextView()
                 }
+                .padding([.leading,.trailing])
                 
-                Image("MainPhoto")
-                    .resizable()
-                    .frame(width: 350, height: 300)
-                    .padding(.bottom)
-                
-                Text(AppTextConstants.LobbyHeader)
-                    .font(.headline)
-                    .foregroundColor(Color.green)
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text(AppTextConstants.LobbyButton)
-                    
-                })
-                .buttonStyle(.borderedProminent)
-                .tint(.blue)
-                .foregroundColor(.white)
-                .buttonBorderShape(.roundedRectangle)
-                
-                Text(AppTextConstants.LobbyButtonSubTittle)
-                    .font(.headline)
-                    .foregroundColor(Color.green)
-                    .padding(.bottom)
-                
-                TextView()
-                
+                LobbyFooterView()
+                    .frame(width: 400,height: 200)
             }
-            .padding([.leading,.trailing])
         }
+        .ignoresSafeArea()
     }
 }
 
