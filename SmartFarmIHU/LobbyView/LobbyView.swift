@@ -10,9 +10,10 @@ import SwiftUI
 
 struct LobbyView: View {
     
-    @State var buttonIcon:String = "MenuBarIcon"
+    @StateObject var viewModel = LobbyViewModel()
+
     @State var dropDownmenu:Bool = false
-    
+    @State var menuSelection: MenuSelection = .home
     
     var body: some View {
         HStack {
@@ -22,57 +23,32 @@ struct LobbyView: View {
             Spacer()
             
             Button(action: {
-                changeIconofMenu()
+                viewModel.buttonIcon2.toggle()
                 withAnimation {
                     dropDownmenu.toggle()
                 }
-//                print("1231")
             }, label: {
-                Image(buttonIcon)
+                Image(viewModel.buttonIcon2 ?  "CloseIcon" : "MenuBarIcon")
                     .resizable()
                     .frame(width: 50, height: 50)
             })
         }
         .padding(10)
         
+        if dropDownmenu {
+            DropDownMenuView(selection: $menuSelection, dropDownmenu: $dropDownmenu, menuIcon: $viewModel.buttonIcon2)
+        }
+        
         ScrollView {
             VStack {
-                Group {
-                    if dropDownmenu {
-                            DropDownMenuView()
+                    if menuSelection == .home {
+                            HomeView()
+                    } else if menuSelection == .purpose {
+                        PurposeView()
                     }
                     
-                    Image("MainPhoto")
-                        .resizable()
-                        .frame(width: 350, height: 300)
-                        .padding(.bottom)
-                    
-                    Text(AppTextConstants.LobbyHeader)
-                        .font(.headline)
-                        .foregroundColor(Color.App.green)
-                    
-                    Button(action: {
-                        
-                    }, label: {
-                        Text(AppTextConstants.LobbyButton)
-                        
-                    })
-                    .buttonStyle(.borderedProminent)
-                    .tint(Color.App.buttonBlue)
-                    .foregroundColor(.white)
-                    .buttonBorderShape(.roundedRectangle)
-                    
-                    Text(AppTextConstants.LobbyButtonSubTittle)
-                        .font(.headline)
-                        .foregroundColor(Color.App.green)
-                        .padding(.bottom)
-                    
-                    TextView()
-                }
-                .padding([.leading,.trailing])
-                
-                LobbyFooterView()
-                    .frame(width: 400,height: 200)
+                    LobbyFooterView()
+                        .frame(width: 400,height: 200)
             }
         }
         .ignoresSafeArea()

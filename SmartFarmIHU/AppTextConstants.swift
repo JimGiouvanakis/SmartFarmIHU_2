@@ -39,6 +39,11 @@ class AppTextConstants {
     
     static let FooterViewText = "Designed by alkisser. All Rights Reserved © 2022."
     
+    // MARK: - Tab Bar Menu
+    
+    static let home = "Αρχική"
+    
+    static let purpose = "Σκοπός του Έργου" 
     
 }
 

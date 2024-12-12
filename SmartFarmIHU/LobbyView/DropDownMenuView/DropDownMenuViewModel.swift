@@ -27,29 +27,12 @@ class DropDownMenuViewModel: ObservableObject {
             withAnimation {
                 self.showItem2.toggle()
             }
-//            self.showItem2.toggle()
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             withAnimation {
                 self.showItem3.toggle()
             }
-//            self.showItem3.toggle()
         }
     }
-    
-    func buttonTapped(index: Int) {
-        if index == 1 {
-            self.homeButtonTapped.toggle()
-        }
-        
-        if index == 2 {
-            self.purposeButtonTapped.toggle()
-        }
-        
-        if index == 3 {
-            self.teamButtonTapped.toggle()
-        }
-    }
-    
 }
