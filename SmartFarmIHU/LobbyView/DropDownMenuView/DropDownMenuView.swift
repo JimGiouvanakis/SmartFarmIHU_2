@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct DropDownMenuView: View {
+    @StateObject var viewModel = DropDownMenyViewModel()
+    
     var body: some View {
         VStack {
-            HStack {
+            if viewModel.showItem1 {
+                HStack {
                 Button(action: {
                     
                 }, label: {
@@ -18,37 +21,45 @@ struct DropDownMenuView: View {
                 })
                 Spacer()
             }
-            .padding(.leading)
-            
-            Divider()
-            
-            HStack {
-                Button(action: {
-                    
-                }, label: {
-                    Text("Details")
-                })
-                Spacer()
-            }
-            .padding(.leading)
-            
-            Divider()
-            
-            HStack {
-                Button(action: {
-                    
-                }, label: {
-                    Text("Search")
-                })
-                Spacer()
-            }
-            .padding(.leading)
+                .padding(.leading)
             
             Divider()
         }
+        
+            if viewModel.showItem2 {
+                HStack {
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Details")
+                    })
+                    Spacer()
+                }
+                .padding(.leading)
+                
+                Divider()
+            }
+            
+            if viewModel.showItem3 {
+                HStack {
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Search")
+                    })
+                    Spacer()
+                }
+                .padding(.leading)
+                
+                Divider()
+            }
+    }
         .foregroundColor(.black)
         .background(BackgroundClearView())
-    }
+        .onAppear {
+            viewModel.addDelay()
+        }
+}
 }
 
 #Preview {

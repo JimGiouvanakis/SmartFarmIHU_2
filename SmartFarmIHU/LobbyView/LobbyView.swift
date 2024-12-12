@@ -23,7 +23,9 @@ struct LobbyView: View {
             
             Button(action: {
                 changeIconofMenu()
-                dropDownmenu.toggle()
+                withAnimation {
+                    dropDownmenu.toggle()
+                }
 //                print("1231")
             }, label: {
                 Image(buttonIcon)
@@ -48,7 +50,7 @@ struct LobbyView: View {
             VStack {
                 Group {
                     if dropDownmenu {
-                        //                    let menu = DropDownMenuView()
+                            DropDownMenuView()
                     }
                     
                     Image("MainPhoto")
