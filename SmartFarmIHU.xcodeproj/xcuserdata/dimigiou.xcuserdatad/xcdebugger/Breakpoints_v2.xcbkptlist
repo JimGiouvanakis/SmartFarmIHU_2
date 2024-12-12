@@ -23,32 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B985216E-9BA6-48EC-8740-3A277E343C26"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SmartFarmIHU/LobbyView/DropDownMenuView/DropDownMenuView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "39255F41-B3B1-4935-87AE-B87CEFFF24E1"
+            uuid = "10AB5B8A-A3F6-4107-B5F5-DCB6A47F91A5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartFarmIHU/LobbyView/DropDownMenuView/DropDownMenyViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "addDelay()"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "buttonTapped(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

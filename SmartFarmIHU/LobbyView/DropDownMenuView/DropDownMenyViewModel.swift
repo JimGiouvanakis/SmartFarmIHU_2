@@ -14,6 +14,10 @@ class DropDownMenyViewModel: ObservableObject {
     @Published var showItem2:Bool = false
     @Published var showItem3:Bool = false
     
+    @Published var homeButtonTapped:Bool = false
+    @Published var purposeButtonTapped:Bool = false
+    @Published var teamButtonTapped:Bool = false
+    
     func addDelay() {
         withAnimation {
             self.showItem1.toggle()
@@ -33,4 +37,19 @@ class DropDownMenyViewModel: ObservableObject {
 //            self.showItem3.toggle()
         }
     }
+    
+    func buttonTapped(index: Int) {
+        if index == 1 {
+            self.homeButtonTapped.toggle()
+        }
+        
+        if index == 2 {
+            self.purposeButtonTapped.toggle()
+        }
+        
+        if index == 3 {
+            self.teamButtonTapped.toggle()
+        }
+    }
+    
 }

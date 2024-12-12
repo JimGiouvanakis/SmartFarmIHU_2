@@ -69,7 +69,7 @@ struct LobbyView: View {
                         
                     })
                     .buttonStyle(.borderedProminent)
-                    .tint(Color.App.blue)
+                    .tint(Color.App.buttonBlue)
                     .foregroundColor(.white)
                     .buttonBorderShape(.roundedRectangle)
                     
