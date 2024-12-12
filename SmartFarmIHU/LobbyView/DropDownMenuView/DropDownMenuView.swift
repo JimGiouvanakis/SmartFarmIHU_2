@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DropDownMenuView: View {
-    @StateObject var viewModel = DropDownMenyViewModel()
+    @StateObject var viewModel = DropDownMenuViewModel()
     
     @State var buttonTappedColor: Color = Color.App.buttonTappedGreen
     @State var buttonColor: Color = Color.App.menuButtonGray

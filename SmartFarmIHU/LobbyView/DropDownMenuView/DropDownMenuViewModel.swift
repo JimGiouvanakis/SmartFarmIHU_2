@@ -1,5 +1,5 @@
 //
-//  DropDownMenyViewModel.swift
+//  DropDownMenuViewModel.swift
 //  SmartFarmIHU
 //
 //  Created by Dimitris Giouvanakis on 12/12/24.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class DropDownMenyViewModel: ObservableObject {
+class DropDownMenuViewModel: ObservableObject {
     
     @Published var showItem1:Bool = false
     @Published var showItem2:Bool = false
