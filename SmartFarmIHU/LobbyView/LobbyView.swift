@@ -32,17 +32,6 @@ struct LobbyView: View {
                     .resizable()
                     .frame(width: 50, height: 50)
             })
-            
-//            Button(action: {
-//                
-//            }, label: {
-//                Image(systemName: "magnifyingglass")
-//                    .resizable()
-//                    .frame(width: 30, height: 30)
-//                    .foregroundColor(.black)
-//                    .opacity(0.5)
-//            })
-            
         }
         .padding(10)
         

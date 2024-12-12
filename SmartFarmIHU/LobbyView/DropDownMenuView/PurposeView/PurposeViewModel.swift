@@ -19,25 +19,41 @@ class PurposeViewModel: ObservableObject {
     @Published var buttonFindTapped:Bool = false
     @Published var buttonMethodologyTapped:Bool = false
     @Published var buttonDevelopingTapped:Bool = false
-
+    
     func buttonTapped(button : ButtonTapped) {
         switch button {
         case .buttonDiseases:
-            buttonDiseasesTapped.toggle()
+            withAnimation {
+                buttonDiseasesTapped.toggle()
+            }
         case .buttonSmartFarming:
-            buttonSmartFarmingTapped.toggle()
+            withAnimation {
+                buttonSmartFarmingTapped.toggle()
+            }
         case .buttonΤechniques:
-            buttonΤechniquesTapped.toggle()
+            withAnimation {
+                buttonΤechniquesTapped.toggle()
+            }
         case .buttonChart:
-            buttonChartTapped.toggle()
+            withAnimation {
+                buttonChartTapped.toggle()
+            }
         case .buttonGrowth:
-            buttonGrowthTapped.toggle()
+            withAnimation {
+                buttonGrowthTapped.toggle()
+            }
         case .buttonFind:
-            buttonFindTapped.toggle()
+            withAnimation {
+                buttonFindTapped.toggle()
+            }
         case .buttonMethodology:
-            buttonMethodologyTapped.toggle()
+            withAnimation {
+                buttonMethodologyTapped.toggle()
+            }
         case .buttonDeveloping:
-            buttonDevelopingTapped.toggle()
+            withAnimation {
+                buttonDevelopingTapped.toggle()
+            }
         }
     }
     

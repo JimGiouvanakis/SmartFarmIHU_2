@@ -22,6 +22,8 @@
 		65A1CB5F2D0AF05E00B957C4 /* PurposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB5E2D0AF05E00B957C4 /* PurposeView.swift */; };
 		65A1CB612D0AF48400B957C4 /* PurposeViewTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB602D0AF48400B957C4 /* PurposeViewTexts.swift */; };
 		65A1CB632D0AFAF500B957C4 /* PurposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB622D0AFAF500B957C4 /* PurposeViewModel.swift */; };
+		65A1CB662D0B06CF00B957C4 /* DiseasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB652D0B06CF00B957C4 /* DiseasesView.swift */; };
+		65A1CB682D0B073000B957C4 /* DiseasesViewTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB672D0B073000B957C4 /* DiseasesViewTexts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		65A1CB5E2D0AF05E00B957C4 /* PurposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeView.swift; sourceTree = "<group>"; };
 		65A1CB602D0AF48400B957C4 /* PurposeViewTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeViewTexts.swift; sourceTree = "<group>"; };
 		65A1CB622D0AFAF500B957C4 /* PurposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeViewModel.swift; sourceTree = "<group>"; };
+		65A1CB652D0B06CF00B957C4 /* DiseasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseasesView.swift; sourceTree = "<group>"; };
+		65A1CB672D0B073000B957C4 /* DiseasesViewTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseasesViewTexts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +148,18 @@
 				65A1CB5E2D0AF05E00B957C4 /* PurposeView.swift */,
 				65A1CB622D0AFAF500B957C4 /* PurposeViewModel.swift */,
 				65A1CB602D0AF48400B957C4 /* PurposeViewTexts.swift */,
+				65A1CB642D0B06BC00B957C4 /* DiseasesView */,
 			);
 			path = PurposeView;
+			sourceTree = "<group>";
+		};
+		65A1CB642D0B06BC00B957C4 /* DiseasesView */ = {
+			isa = PBXGroup;
+			children = (
+				65A1CB652D0B06CF00B957C4 /* DiseasesView.swift */,
+				65A1CB672D0B073000B957C4 /* DiseasesViewTexts.swift */,
+			);
+			path = DiseasesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +234,7 @@
 			files = (
 				6567FE0D2D09D71A005FEF04 /* DropDownMenuView.swift in Sources */,
 				65A1CB542D0ADEF900B957C4 /* LobbyFooterView.swift in Sources */,
+				65A1CB682D0B073000B957C4 /* DiseasesViewTexts.swift in Sources */,
 				65A1CB612D0AF48400B957C4 /* PurposeViewTexts.swift in Sources */,
 				65A1CB522D0ADC5000B957C4 /* AppColor.swift in Sources */,
 				65A1CB632D0AFAF500B957C4 /* PurposeViewModel.swift in Sources */,
@@ -231,6 +246,7 @@
 				65A1CB5F2D0AF05E00B957C4 /* PurposeView.swift in Sources */,
 				6567FE042D09CAB1005FEF04 /* LobbyUIModel.swift in Sources */,
 				6567FE0A2D09CE9D005FEF04 /* TextView.swift in Sources */,
+				65A1CB662D0B06CF00B957C4 /* DiseasesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ import Foundation
 
 class PurposeViewTexts {
     
+    static let header = "Σκοπός του Έργου"
+    
     static let headerTitle = "Εφαρμογή και αξιοποίηση τεχνικών και λύσεων που προέρχονται από την Έξυπνη Γεωργία."
     
     static let headerSubTittle = "- Σκοπός -"

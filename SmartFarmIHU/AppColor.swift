@@ -40,8 +40,12 @@ extension Color {
     struct App {
         
         // MARK: - Main App Colors
+        
         static var green: Color {
             Color(hex: "#0e8747")
+        }
+        static var gray: Color {
+            Color(hex: "#7a7a7a")
         }
         
         static var lobbyFooterBlue1: Color {
@@ -52,6 +56,9 @@ extension Color {
             Color(hex: "#28313d")
         }
         
+        static var headerGray: Color {
+            Color(hex: "#dcdce1")
+        }
         
         // MARK: - Button Colors
         
@@ -67,6 +74,7 @@ extension Color {
             Color(hex: "#515d6b")
         }
     }
+    
 }
 
 
