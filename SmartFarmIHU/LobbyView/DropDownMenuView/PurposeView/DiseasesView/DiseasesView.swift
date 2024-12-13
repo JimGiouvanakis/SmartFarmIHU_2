@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct DiseasesView: View {
+    
     var body: some View {
         VStack{
-            
-            Text(DiseasesViewTexts.Text1)
-            
-            Spacer()
-            
-            Text(DiseasesViewTexts.Text2)
+            Text(AppTextConstants.Text1)
             
             Spacer()
+            
+            Text(AppTextConstants.Text2)
+            
+            Spacer()
             Spacer()
             
-            ForEach(DiseasesViewTexts().machineLearningModels.indices, id: \.self) { index in
+            ForEach(AppTextConstants.machineLearningModels.indices, id: \.self) { index in
                 HStack {
                     Text("\(index + 1).")
                         .bold()
-                    Text(DiseasesViewTexts().machineLearningModels[index])
+                    Text(AppTextConstants.machineLearningModels[index])
                     
                     Spacer()
                 }
@@ -33,15 +33,15 @@ struct DiseasesView: View {
             
             Spacer()
             
-            Text(DiseasesViewTexts.Text3)
+            Text(AppTextConstants.Text3)
             
             Spacer()
             
-            ForEach(DiseasesViewTexts().plantDiseases.indices, id: \.self) { index in
+            ForEach(AppTextConstants.plantDiseases.indices, id: \.self) { index in
                 HStack {
                     Text("\(index + 1).")
                         .bold()
-                    Text(DiseasesViewTexts().plantDiseases[index])
+                    Text(AppTextConstants.plantDiseases[index])
                     
                     Spacer()
                 }

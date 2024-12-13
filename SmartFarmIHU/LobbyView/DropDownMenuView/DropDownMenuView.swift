@@ -61,8 +61,13 @@ struct DropDownMenuView: View {
             if viewModel.showItem3 {
                 HStack {
                     Button(action: {
+                        withAnimation {
+                            dropDownmenu.toggle()
+                            menuIcon.toggle()
+                            selection = .team
+                        }
                     }, label: {
-                        Text("Search")
+                        Text(AppTextConstants.team)
                             .foregroundColor(viewModel.teamButtonTapped ? buttonTappedColor : buttonColor)
                     })
                     Spacer()
@@ -73,7 +78,7 @@ struct DropDownMenuView: View {
             }
         }
         .foregroundColor(.black)
-        .background(BackgroundClearView())
+        .background(.white)
         .onAppear {
             viewModel.addDelay()
         }

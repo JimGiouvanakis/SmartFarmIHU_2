@@ -16,42 +16,47 @@ struct LobbyView: View {
     @State var menuSelection: MenuSelection = .home
     
     var body: some View {
-        HStack {
-            Image("IHUIcon")
-                .resizable()
-                .frame(width: 150, height: 50)
-            Spacer()
-            
-            Button(action: {
-                viewModel.buttonIcon2.toggle()
-                withAnimation {
-                    dropDownmenu.toggle()
-                }
-            }, label: {
-                Image(viewModel.buttonIcon2 ?  "CloseIcon" : "MenuBarIcon")
+        VStack {
+            HStack {
+                Image("IHUIcon")
                     .resizable()
-                    .frame(width: 50, height: 50)
-            })
-        }
-        .padding(10)
-        
-        if dropDownmenu {
-            DropDownMenuView(selection: $menuSelection, dropDownmenu: $dropDownmenu, menuIcon: $viewModel.buttonIcon2)
-        }
-        
-        ScrollView {
-            VStack {
+                    .frame(width: 150, height: 50)
+                Spacer()
+                
+                Button(action: {
+                    viewModel.buttonIcon2.toggle()
+                    withAnimation {
+                        dropDownmenu.toggle()
+                    }
+                }, label: {
+                    Image(viewModel.buttonIcon2 ?  "CloseIcon" : "MenuBarIcon")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                })
+            }
+            .padding(10)
+            
+            if dropDownmenu {
+                DropDownMenuView(selection: $menuSelection, dropDownmenu: $dropDownmenu, menuIcon: $viewModel.buttonIcon2)
+            }
+            
+            ScrollView {
+                VStack {
                     if menuSelection == .home {
-                            HomeView()
+                        HomeView()
                     } else if menuSelection == .purpose {
                         PurposeView()
+                    } else if menuSelection == .team {
+                        TeamView()
                     }
                     
                     LobbyFooterView()
                         .frame(width: 400,height: 200)
+                }
             }
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
+        .background(.white)
     }
 }
 
