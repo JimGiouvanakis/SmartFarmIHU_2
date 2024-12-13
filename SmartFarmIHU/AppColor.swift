@@ -74,7 +74,4 @@ extension Color {
             Color(hex: "#515d6b")
         }
     }
-    
 }
-
-

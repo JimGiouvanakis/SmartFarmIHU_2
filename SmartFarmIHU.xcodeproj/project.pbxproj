@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		654968302D0C297500437223 /* SmartFarmingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549682F2D0C297500437223 /* SmartFarmingView.swift */; };
+		654968332D0C2D1B00437223 /* ΤechniquesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654968322D0C2D1B00437223 /* ΤechniquesView.swift */; };
+		654968362D0C321B00437223 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654968352D0C321B00437223 /* ChartView.swift */; };
+		654968392D0C33BF00437223 /* GrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654968382D0C33BF00437223 /* GrowthView.swift */; };
+		6549683C2D0C3CB300437223 /* FindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549683B2D0C3CB300437223 /* FindView.swift */; };
+		6549683F2D0C3F7500437223 /* MethologyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6549683E2D0C3F7500437223 /* MethologyView.swift */; };
+		654968422D0C414100437223 /* DevelopingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654968412D0C414100437223 /* DevelopingView.swift */; };
+		654968452D0C481400437223 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654968442D0C481400437223 /* TeamView.swift */; };
+		654968492D0C4C4500437223 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654968482D0C4C4500437223 /* TeamViewModel.swift */; };
 		6567FDF42D09C6FE005FEF04 /* SmartFarmIHUApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567FDF32D09C6FE005FEF04 /* SmartFarmIHUApp.swift */; };
 		6567FDF82D09C6FF005FEF04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6567FDF72D09C6FF005FEF04 /* Assets.xcassets */; };
 		6567FDFB2D09C6FF005FEF04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6567FDFA2D09C6FF005FEF04 /* Preview Assets.xcassets */; };
@@ -19,15 +28,22 @@
 		65A1CB542D0ADEF900B957C4 /* LobbyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB532D0ADEF900B957C4 /* LobbyFooterView.swift */; };
 		65A1CB5C2D0AEFF800B957C4 /* DropDownMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB5B2D0AEFF800B957C4 /* DropDownMenuViewModel.swift */; };
 		65A1CB5F2D0AF05E00B957C4 /* PurposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB5E2D0AF05E00B957C4 /* PurposeView.swift */; };
-		65A1CB612D0AF48400B957C4 /* PurposeViewTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB602D0AF48400B957C4 /* PurposeViewTexts.swift */; };
 		65A1CB632D0AFAF500B957C4 /* PurposeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB622D0AFAF500B957C4 /* PurposeViewModel.swift */; };
 		65A1CB662D0B06CF00B957C4 /* DiseasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB652D0B06CF00B957C4 /* DiseasesView.swift */; };
-		65A1CB682D0B073000B957C4 /* DiseasesViewTexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB672D0B073000B957C4 /* DiseasesViewTexts.swift */; };
 		65CC20A32D0B2B5600AD14A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CC20A22D0B2B5600AD14A7 /* HomeView.swift */; };
 		65CC20A52D0B2CD700AD14A7 /* LobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CC20A42D0B2CD700AD14A7 /* LobbyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6549682F2D0C297500437223 /* SmartFarmingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFarmingView.swift; sourceTree = "<group>"; };
+		654968322D0C2D1B00437223 /* ΤechniquesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ΤechniquesView.swift"; sourceTree = "<group>"; };
+		654968352D0C321B00437223 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		654968382D0C33BF00437223 /* GrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthView.swift; sourceTree = "<group>"; };
+		6549683B2D0C3CB300437223 /* FindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindView.swift; sourceTree = "<group>"; };
+		6549683E2D0C3F7500437223 /* MethologyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethologyView.swift; sourceTree = "<group>"; };
+		654968412D0C414100437223 /* DevelopingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopingView.swift; sourceTree = "<group>"; };
+		654968442D0C481400437223 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		654968482D0C4C4500437223 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 		6567FDF02D09C6FE005FEF04 /* SmartFarmIHU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFarmIHU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6567FDF32D09C6FE005FEF04 /* SmartFarmIHUApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFarmIHUApp.swift; sourceTree = "<group>"; };
 		6567FDF72D09C6FF005FEF04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,10 +57,8 @@
 		65A1CB532D0ADEF900B957C4 /* LobbyFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyFooterView.swift; sourceTree = "<group>"; };
 		65A1CB5B2D0AEFF800B957C4 /* DropDownMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuViewModel.swift; sourceTree = "<group>"; };
 		65A1CB5E2D0AF05E00B957C4 /* PurposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeView.swift; sourceTree = "<group>"; };
-		65A1CB602D0AF48400B957C4 /* PurposeViewTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeViewTexts.swift; sourceTree = "<group>"; };
 		65A1CB622D0AFAF500B957C4 /* PurposeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurposeViewModel.swift; sourceTree = "<group>"; };
 		65A1CB652D0B06CF00B957C4 /* DiseasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseasesView.swift; sourceTree = "<group>"; };
-		65A1CB672D0B073000B957C4 /* DiseasesViewTexts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseasesViewTexts.swift; sourceTree = "<group>"; };
 		65CC20A22D0B2B5600AD14A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		65CC20A42D0B2CD700AD14A7 /* LobbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +74,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6549682E2D0C296700437223 /* SmartFarmingView */ = {
+			isa = PBXGroup;
+			children = (
+				6549682F2D0C297500437223 /* SmartFarmingView.swift */,
+			);
+			path = SmartFarmingView;
+			sourceTree = "<group>";
+		};
+		654968312D0C2CBB00437223 /* ΤechniquesView */ = {
+			isa = PBXGroup;
+			children = (
+				654968322D0C2D1B00437223 /* ΤechniquesView.swift */,
+			);
+			path = "ΤechniquesView";
+			sourceTree = "<group>";
+		};
+		654968342D0C31F200437223 /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				654968352D0C321B00437223 /* ChartView.swift */,
+			);
+			path = ChartView;
+			sourceTree = "<group>";
+		};
+		654968372D0C33B300437223 /* GrowthView */ = {
+			isa = PBXGroup;
+			children = (
+				654968382D0C33BF00437223 /* GrowthView.swift */,
+			);
+			path = GrowthView;
+			sourceTree = "<group>";
+		};
+		6549683A2D0C3CA800437223 /* FindView */ = {
+			isa = PBXGroup;
+			children = (
+				6549683B2D0C3CB300437223 /* FindView.swift */,
+			);
+			path = FindView;
+			sourceTree = "<group>";
+		};
+		6549683D2D0C3F6D00437223 /* MethologyView */ = {
+			isa = PBXGroup;
+			children = (
+				6549683E2D0C3F7500437223 /* MethologyView.swift */,
+			);
+			path = MethologyView;
+			sourceTree = "<group>";
+		};
+		654968402D0C413200437223 /* DevelopingView */ = {
+			isa = PBXGroup;
+			children = (
+				654968412D0C414100437223 /* DevelopingView.swift */,
+			);
+			path = DevelopingView;
+			sourceTree = "<group>";
+		};
+		654968432D0C480000437223 /* TeamView */ = {
+			isa = PBXGroup;
+			children = (
+				654968442D0C481400437223 /* TeamView.swift */,
+				654968482D0C4C4500437223 /* TeamViewModel.swift */,
+			);
+			path = TeamView;
+			sourceTree = "<group>";
+		};
 		6567FDE72D09C6FE005FEF04 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +204,7 @@
 				65A1CB5B2D0AEFF800B957C4 /* DropDownMenuViewModel.swift */,
 				65CC20A12D0B2B4800AD14A7 /* HomeView */,
 				65A1CB5D2D0AF04F00B957C4 /* PurposeView */,
+				654968432D0C480000437223 /* TeamView */,
 			);
 			path = DropDownMenuView;
 			sourceTree = "<group>";
@@ -150,8 +230,14 @@
 			children = (
 				65A1CB5E2D0AF05E00B957C4 /* PurposeView.swift */,
 				65A1CB622D0AFAF500B957C4 /* PurposeViewModel.swift */,
-				65A1CB602D0AF48400B957C4 /* PurposeViewTexts.swift */,
 				65A1CB642D0B06BC00B957C4 /* DiseasesView */,
+				6549682E2D0C296700437223 /* SmartFarmingView */,
+				654968312D0C2CBB00437223 /* ΤechniquesView */,
+				654968342D0C31F200437223 /* ChartView */,
+				654968372D0C33B300437223 /* GrowthView */,
+				6549683A2D0C3CA800437223 /* FindView */,
+				6549683D2D0C3F6D00437223 /* MethologyView */,
+				654968402D0C413200437223 /* DevelopingView */,
 			);
 			path = PurposeView;
 			sourceTree = "<group>";
@@ -160,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				65A1CB652D0B06CF00B957C4 /* DiseasesView.swift */,
-				65A1CB672D0B073000B957C4 /* DiseasesViewTexts.swift */,
 			);
 			path = DiseasesView;
 			sourceTree = "<group>";
@@ -244,20 +329,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				6567FE0D2D09D71A005FEF04 /* DropDownMenuView.swift in Sources */,
+				654968392D0C33BF00437223 /* GrowthView.swift in Sources */,
+				6549683C2D0C3CB300437223 /* FindView.swift in Sources */,
+				654968422D0C414100437223 /* DevelopingView.swift in Sources */,
 				65A1CB542D0ADEF900B957C4 /* LobbyFooterView.swift in Sources */,
-				65A1CB682D0B073000B957C4 /* DiseasesViewTexts.swift in Sources */,
-				65A1CB612D0AF48400B957C4 /* PurposeViewTexts.swift in Sources */,
 				65CC20A52D0B2CD700AD14A7 /* LobbyViewModel.swift in Sources */,
+				654968332D0C2D1B00437223 /* ΤechniquesView.swift in Sources */,
 				65A1CB522D0ADC5000B957C4 /* AppColor.swift in Sources */,
+				654968492D0C4C4500437223 /* TeamViewModel.swift in Sources */,
 				65A1CB632D0AFAF500B957C4 /* PurposeViewModel.swift in Sources */,
 				6567FE072D09CBED005FEF04 /* AppTextConstants.swift in Sources */,
 				6567FE102D09D7D2005FEF04 /* BackGroundClearView.swift in Sources */,
+				654968452D0C481400437223 /* TeamView.swift in Sources */,
 				6567FDF42D09C6FE005FEF04 /* SmartFarmIHUApp.swift in Sources */,
 				6567FE022D09CA2F005FEF04 /* LobbyView.swift in Sources */,
+				654968362D0C321B00437223 /* ChartView.swift in Sources */,
+				6549683F2D0C3F7500437223 /* MethologyView.swift in Sources */,
 				65A1CB5C2D0AEFF800B957C4 /* DropDownMenuViewModel.swift in Sources */,
 				65A1CB5F2D0AF05E00B957C4 /* PurposeView.swift in Sources */,
 				65CC20A32D0B2B5600AD14A7 /* HomeView.swift in Sources */,
 				6567FE0A2D09CE9D005FEF04 /* TextView.swift in Sources */,
+				654968302D0C297500437223 /* SmartFarmingView.swift in Sources */,
 				65A1CB662D0B06CF00B957C4 /* DiseasesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

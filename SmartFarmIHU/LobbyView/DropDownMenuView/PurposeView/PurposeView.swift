@@ -18,8 +18,7 @@ struct PurposeView: View {
             VStack() {
                 ZStack {
                     HStack {
-                        Text(PurposeViewTexts.header)
-                        //                        .frame(width:400,height: 50)
+                        Text(AppTextConstants.header)
                             .font(.title)
                             .foregroundColor(Color.black)
                             .padding(10)
@@ -31,11 +30,11 @@ struct PurposeView: View {
                 .background(Color.App.headerGray)
                 
                 Group {
-                    Text(PurposeViewTexts.headerTitle)
+                    Text(AppTextConstants.headerTitle)
                         .font(.headline)
                         .foregroundColor(Color.App.green)
                     
-                    Text(PurposeViewTexts.headerSubTittle)
+                    Text(AppTextConstants.headerSubTittle)
                         .font(.headline)
                         .foregroundColor(Color.App.green)
                     
@@ -50,7 +49,7 @@ struct PurposeView: View {
                                 viewModel.buttonTapped(button: .buttonDiseases)
                             }, label: {
                                 Image(systemName: viewModel.buttonDiseasesTapped  ? "minus" : "plus")
-                                Text(PurposeViewTexts.buttonDiseases)
+                                Text(AppTextConstants.buttonDiseases)
                             })
                             .foregroundColor(Color.App.green)
                             
@@ -73,7 +72,7 @@ struct PurposeView: View {
                                 viewModel.buttonTapped(button: .buttonSmartFarming)
                             }, label: {
                                 Image(systemName: viewModel.buttonSmartFarmingTapped  ? "minus" : "plus")
-                                Text(PurposeViewTexts.buttonSmartFarming)
+                                Text(AppTextConstants.buttonSmartFarming)
                             })
                             .foregroundColor(Color.App.green)
                             
@@ -84,12 +83,19 @@ struct PurposeView: View {
                         Divider()
                             .overlay(Color.App.menuButtonGray)
                         
+                        if viewModel.buttonSmartFarmingTapped {
+                            SmartFarmingView()
+                            
+                            Divider()
+                                .overlay(Color.App.menuButtonGray)
+                        }
+                        
                         HStack {
                             Button(action: {
                                 viewModel.buttonTapped(button: .buttonΤechniques)
                             }, label: {
                                 Image(systemName: viewModel.buttonΤechniquesTapped  ? "minus" : "plus")
-                                Text(PurposeViewTexts.buttonΤechniques)
+                                Text(AppTextConstants.buttonΤechniques)
                                     .multilineTextAlignment(.leading)
                             })
                             .foregroundColor(Color.App.green)
@@ -101,12 +107,19 @@ struct PurposeView: View {
                         Divider()
                             .overlay(Color.App.menuButtonGray)
                         
+                        if viewModel.buttonΤechniquesTapped {
+                            TechniquesView()
+                            
+                            Divider()
+                                .overlay(Color.App.menuButtonGray)
+                        }
+                        
                         HStack {
                             Button(action: {
                                 viewModel.buttonTapped(button: .buttonChart)
                             }, label: {
                                 Image(systemName: viewModel.buttonChartTapped  ? "minus" : "plus")
-                                Text(PurposeViewTexts.buttonChart)
+                                Text(AppTextConstants.buttonChart)
                             })
                             .foregroundColor(Color.App.green)
                             
@@ -117,12 +130,19 @@ struct PurposeView: View {
                         Divider()
                             .overlay(Color.App.menuButtonGray)
                         
+                        if viewModel.buttonChartTapped {
+                            ChartView()
+                            
+                            Divider()
+                                .overlay(Color.App.menuButtonGray)
+                        }
+                        
                         HStack {
                             Button(action: {
                                 viewModel.buttonTapped(button: .buttonGrowth)
                             }, label: {
                                 Image(systemName: viewModel.buttonGrowthTapped  ? "minus" : "plus")
-                                Text(PurposeViewTexts.buttonGrowth)
+                                Text(AppTextConstants.buttonGrowth)
                                     .multilineTextAlignment(.leading)
                                 
                             })
@@ -135,12 +155,19 @@ struct PurposeView: View {
                         Divider()
                             .overlay(Color.App.menuButtonGray)
                         
+                        if viewModel.buttonGrowthTapped {
+                            GrowthView()
+                            
+                            Divider()
+                                .overlay(Color.App.menuButtonGray)
+                        }
+                        
                         HStack {
                             Button(action: {
                                 viewModel.buttonTapped(button: .buttonFind)
                             }, label: {
                                 Image(systemName: viewModel.buttonFindTapped  ? "minus" : "plus")
-                                Text(PurposeViewTexts.buttonFind)
+                                Text(AppTextConstants.buttonFind)
                             })
                             .foregroundColor(Color.App.green)
                             
@@ -150,13 +177,20 @@ struct PurposeView: View {
                         
                         Divider()
                             .overlay(Color.App.menuButtonGray)
+                        
+                        if viewModel.buttonFindTapped {
+                            FindView()
+                            
+                            Divider()
+                                .overlay(Color.App.menuButtonGray)
+                        }
                         
                         HStack {
                             Button(action: {
                                 viewModel.buttonTapped(button: .buttonMethodology)
                             }, label: {
                                 Image(systemName: viewModel.buttonMethodologyTapped  ? "minus" : "plus")
-                                Text(PurposeViewTexts.buttonMethodology)
+                                Text(AppTextConstants.buttonMethodology)
                                     .multilineTextAlignment(.leading)
                             })
                             .foregroundColor(Color.App.green)
@@ -167,13 +201,20 @@ struct PurposeView: View {
                         
                         Divider()
                             .overlay(Color.App.menuButtonGray)
+                        
+                        if viewModel.buttonMethodologyTapped {
+                            MethologyView()
+                            
+                            Divider()
+                                .overlay(Color.App.menuButtonGray)
+                        }
                         
                         HStack {
                             Button(action: {
                                 viewModel.buttonTapped(button: .buttonDeveloping)
                             }, label: {
                                 Image(systemName: viewModel.buttonDevelopingTapped  ? "minus" : "plus")
-                                Text(PurposeViewTexts.buttonDeveloping)
+                                Text(AppTextConstants.buttonDeveloping)
                                     .multilineTextAlignment(.leading)
                             })
                             .foregroundColor(Color.App.green)
@@ -184,6 +225,13 @@ struct PurposeView: View {
                         
                         Divider()
                             .overlay(Color.App.menuButtonGray)
+                        
+                        if viewModel.buttonDevelopingTapped {
+                            DevelopingView()
+                            
+                            Divider()
+                                .overlay(Color.App.menuButtonGray)
+                        }
                     }
                     .border(Color.App.menuButtonGray, width: 0.5)
                 }

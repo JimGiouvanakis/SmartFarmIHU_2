@@ -32,4 +32,5 @@ class LobbyViewModel: ObservableObject {
 enum MenuSelection {
     case home
     case purpose
+    case team
 }

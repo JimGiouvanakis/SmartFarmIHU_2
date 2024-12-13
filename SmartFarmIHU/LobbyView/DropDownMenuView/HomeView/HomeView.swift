@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        ScrollView {
             VStack {
                 Group {
                     Image("MainPhoto")
@@ -41,7 +40,6 @@ struct HomeView: View {
                 }
                 .padding([.leading,.trailing])
             }
-        }
     }
 }
 
