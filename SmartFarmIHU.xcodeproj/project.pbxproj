@@ -24,6 +24,8 @@
 		6567FE0A2D09CE9D005FEF04 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567FE092D09CE9D005FEF04 /* TextView.swift */; };
 		6567FE0D2D09D71A005FEF04 /* DropDownMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567FE0C2D09D71A005FEF04 /* DropDownMenuView.swift */; };
 		6567FE102D09D7D2005FEF04 /* BackGroundClearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567FE0F2D09D7D2005FEF04 /* BackGroundClearView.swift */; };
+		65942EAA2D0C747F0081BA7F /* PackageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65942EA92D0C747F0081BA7F /* PackageView.swift */; };
+		65942EAC2D0C75D50081BA7F /* PackageView+UIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65942EAB2D0C75D50081BA7F /* PackageView+UIModel.swift */; };
 		65A1CB522D0ADC5000B957C4 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB512D0ADC5000B957C4 /* AppColor.swift */; };
 		65A1CB542D0ADEF900B957C4 /* LobbyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB532D0ADEF900B957C4 /* LobbyFooterView.swift */; };
 		65A1CB5C2D0AEFF800B957C4 /* DropDownMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A1CB5B2D0AEFF800B957C4 /* DropDownMenuViewModel.swift */; };
@@ -53,6 +55,8 @@
 		6567FE092D09CE9D005FEF04 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		6567FE0C2D09D71A005FEF04 /* DropDownMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuView.swift; sourceTree = "<group>"; };
 		6567FE0F2D09D7D2005FEF04 /* BackGroundClearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundClearView.swift; sourceTree = "<group>"; };
+		65942EA92D0C747F0081BA7F /* PackageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageView.swift; sourceTree = "<group>"; };
+		65942EAB2D0C75D50081BA7F /* PackageView+UIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PackageView+UIModel.swift"; sourceTree = "<group>"; };
 		65A1CB512D0ADC5000B957C4 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		65A1CB532D0ADEF900B957C4 /* LobbyFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyFooterView.swift; sourceTree = "<group>"; };
 		65A1CB5B2D0AEFF800B957C4 /* DropDownMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuViewModel.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				65CC20A12D0B2B4800AD14A7 /* HomeView */,
 				65A1CB5D2D0AF04F00B957C4 /* PurposeView */,
 				654968432D0C480000437223 /* TeamView */,
+				65942EA82D0C74610081BA7F /* PackageView */,
 			);
 			path = DropDownMenuView;
 			sourceTree = "<group>";
@@ -215,6 +220,15 @@
 				6567FE0F2D09D7D2005FEF04 /* BackGroundClearView.swift */,
 			);
 			path = BackGroundClearView;
+			sourceTree = "<group>";
+		};
+		65942EA82D0C74610081BA7F /* PackageView */ = {
+			isa = PBXGroup;
+			children = (
+				65942EA92D0C747F0081BA7F /* PackageView.swift */,
+				65942EAB2D0C75D50081BA7F /* PackageView+UIModel.swift */,
+			);
+			path = PackageView;
 			sourceTree = "<group>";
 		};
 		65A1CB552D0ADF2A00B957C4 /* LobbyFooterView */ = {
@@ -331,6 +345,7 @@
 				6567FE0D2D09D71A005FEF04 /* DropDownMenuView.swift in Sources */,
 				654968392D0C33BF00437223 /* GrowthView.swift in Sources */,
 				6549683C2D0C3CB300437223 /* FindView.swift in Sources */,
+				65942EAA2D0C747F0081BA7F /* PackageView.swift in Sources */,
 				654968422D0C414100437223 /* DevelopingView.swift in Sources */,
 				65A1CB542D0ADEF900B957C4 /* LobbyFooterView.swift in Sources */,
 				65CC20A52D0B2CD700AD14A7 /* LobbyViewModel.swift in Sources */,
@@ -346,6 +361,7 @@
 				654968362D0C321B00437223 /* ChartView.swift in Sources */,
 				6549683F2D0C3F7500437223 /* MethologyView.swift in Sources */,
 				65A1CB5C2D0AEFF800B957C4 /* DropDownMenuViewModel.swift in Sources */,
+				65942EAC2D0C75D50081BA7F /* PackageView+UIModel.swift in Sources */,
 				65A1CB5F2D0AF05E00B957C4 /* PurposeView.swift in Sources */,
 				65CC20A32D0B2B5600AD14A7 /* HomeView.swift in Sources */,
 				6567FE0A2D09CE9D005FEF04 /* TextView.swift in Sources */,

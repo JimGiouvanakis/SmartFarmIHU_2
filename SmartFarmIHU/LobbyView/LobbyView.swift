@@ -48,6 +48,8 @@ struct LobbyView: View {
                         PurposeView()
                     } else if menuSelection == .team {
                         TeamView()
+                    } else if menuSelection == .package {
+                        PackageView()
                     }
                     
                     LobbyFooterView()

@@ -33,4 +33,5 @@ enum MenuSelection {
     case home
     case purpose
     case team
+    case package
 }

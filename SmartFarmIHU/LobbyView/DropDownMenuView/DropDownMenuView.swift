@@ -76,6 +76,25 @@ struct DropDownMenuView: View {
                 
                 Divider()
             }
+            
+            if viewModel.showItem3 {
+                HStack {
+                    Button(action: {
+                        withAnimation {
+                            dropDownmenu.toggle()
+                            menuIcon.toggle()
+                            selection = .package
+                        }
+                    }, label: {
+                        Text(AppTextConstants.package)
+                            .foregroundColor(viewModel.packageButtonTapped ? buttonTappedColor : buttonColor)
+                    })
+                    Spacer()
+                }
+                .padding(.leading)
+                
+                Divider()
+            }
         }
         .foregroundColor(.black)
         .background(.white)
