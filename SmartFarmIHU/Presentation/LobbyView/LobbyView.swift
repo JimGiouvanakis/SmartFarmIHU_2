@@ -54,6 +54,8 @@ struct LobbyView: View {
 //                        ResultView()
                     } else if menuSelection == .contract {
                         ContractView()
+                    } else if menuSelection == .english {
+                        HomeView()
                     }
                     
                     LobbyFooterView()

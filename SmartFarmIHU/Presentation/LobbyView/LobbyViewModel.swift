@@ -20,6 +20,7 @@ class LobbyViewModel: ObservableObject {
             buttonIcon = "MenuBarIcon"
         }
     }
+    
 }
 
 enum MenuSelection {
@@ -29,4 +30,5 @@ enum MenuSelection {
     case package
     case result
     case contract
+    case english
 }

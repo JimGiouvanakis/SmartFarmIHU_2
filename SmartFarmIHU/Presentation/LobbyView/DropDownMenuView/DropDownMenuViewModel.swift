@@ -10,12 +10,13 @@ import SwiftUI
 
 class DropDownMenuViewModel: ObservableObject {
     
-    @Published var showItem1:Bool = false
-    @Published var showItem2:Bool = false
-    @Published var showItem3:Bool = false
+    @Published var showHomeButton:Bool = false
+    @Published var showPurposeButton:Bool = false
+    @Published var showTeamButton:Bool = false
     @Published var showItem4:Bool = false
-    @Published var showItem5:Bool = false
-    @Published var showItem6:Bool = false
+    @Published var showResultButton:Bool = false
+    @Published var showContractButton:Bool = false
+    @Published var showEnglishButton:Bool = false
     
     @Published var homeButtonTapped:Bool = false
     @Published var purposeButtonTapped:Bool = false
@@ -23,21 +24,22 @@ class DropDownMenuViewModel: ObservableObject {
     @Published var packageButtonTapped:Bool = false
     @Published var resultButtonTapped:Bool = false
     @Published var contractButtonTapped:Bool = false
+    @Published var englishButtonTapped:Bool = false
     
     func addDelay() {
         withAnimation {
-            self.showItem1.toggle()
+            self.showHomeButton.toggle()
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             withAnimation {
-                self.showItem2.toggle()
+                self.showPurposeButton.toggle()
             }
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             withAnimation {
-                self.showItem3.toggle()
+                self.showTeamButton.toggle()
             }
         }
         
@@ -49,14 +51,28 @@ class DropDownMenuViewModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             withAnimation {
-                self.showItem5.toggle()
+                self.showResultButton.toggle()
             }
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             withAnimation {
-                self.showItem6.toggle()
+                self.showContractButton.toggle()
             }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            withAnimation {
+                self.showEnglishButton.toggle()
+            }
+        }
+    }
+    
+    func changeLanguage() {
+        if AppViewModel.shared.appLanguage == .english {
+            AppViewModel.shared.appLanguage = .greek
+        } else {
+            AppViewModel.shared.appLanguage = .english
         }
     }
 }

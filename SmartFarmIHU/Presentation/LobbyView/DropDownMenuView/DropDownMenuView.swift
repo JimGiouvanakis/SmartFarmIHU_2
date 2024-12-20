@@ -19,7 +19,7 @@ struct DropDownMenuView: View {
     
     var body: some View {
         VStack {
-            if viewModel.showItem1 {
+            if viewModel.showHomeButton {
                 HStack {
                     Button(action: {
                         withAnimation {
@@ -39,7 +39,7 @@ struct DropDownMenuView: View {
                 Divider()
             }
             
-            if viewModel.showItem2 {
+            if viewModel.showPurposeButton {
                 HStack {
                     Button(action: {
                         withAnimation {
@@ -58,7 +58,7 @@ struct DropDownMenuView: View {
                 Divider()
             }
             
-            if viewModel.showItem3 {
+            if viewModel.showTeamButton {
                 HStack {
                     Button(action: {
                         withAnimation {
@@ -96,7 +96,7 @@ struct DropDownMenuView: View {
                 Divider()
             }
             
-            if viewModel.showItem5 {
+            if viewModel.showResultButton {
                 HStack {
                     Button(action: {
                         withAnimation {
@@ -115,7 +115,7 @@ struct DropDownMenuView: View {
                 Divider()
             }
             
-            if viewModel.showItem6 {
+            if viewModel.showContractButton {
                 HStack {
                     Button(action: {
                         withAnimation {
@@ -125,6 +125,26 @@ struct DropDownMenuView: View {
                         }
                     }, label: {
                         Text(AppTextConstants.contract)
+                            .foregroundColor(viewModel.contractButtonTapped ? buttonTappedColor : buttonColor)
+                    })
+                    Spacer()
+                }
+                .padding(.leading)
+                
+                Divider()
+            }
+            
+            if viewModel.showEnglishButton {
+                HStack {
+                    Button(action: {
+                        withAnimation {
+                            dropDownmenu.toggle()
+                            menuIcon.toggle()
+                                selection = .english
+                            viewModel.changeLanguage()
+                        }
+                    }, label: {
+                        Text(AppTextConstants.english)
                             .foregroundColor(viewModel.contractButtonTapped ? buttonTappedColor : buttonColor)
                     })
                     Spacer()
