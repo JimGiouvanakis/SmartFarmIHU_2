@@ -14,11 +14,15 @@ class DropDownMenuViewModel: ObservableObject {
     @Published var showItem2:Bool = false
     @Published var showItem3:Bool = false
     @Published var showItem4:Bool = false
+    @Published var showItem5:Bool = false
+    @Published var showItem6:Bool = false
     
     @Published var homeButtonTapped:Bool = false
     @Published var purposeButtonTapped:Bool = false
     @Published var teamButtonTapped:Bool = false
     @Published var packageButtonTapped:Bool = false
+    @Published var resultButtonTapped:Bool = false
+    @Published var contractButtonTapped:Bool = false
     
     func addDelay() {
         withAnimation {
@@ -40,6 +44,18 @@ class DropDownMenuViewModel: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             withAnimation {
                 self.showItem4.toggle()
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            withAnimation {
+                self.showItem5.toggle()
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            withAnimation {
+                self.showItem6.toggle()
             }
         }
     }

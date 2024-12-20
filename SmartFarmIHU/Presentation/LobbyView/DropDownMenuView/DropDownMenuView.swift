@@ -77,7 +77,7 @@ struct DropDownMenuView: View {
                 Divider()
             }
             
-            if viewModel.showItem3 {
+            if viewModel.showItem4 {
                 HStack {
                     Button(action: {
                         withAnimation {
@@ -95,6 +95,45 @@ struct DropDownMenuView: View {
                 
                 Divider()
             }
+            
+            if viewModel.showItem5 {
+                HStack {
+                    Button(action: {
+                        withAnimation {
+                            dropDownmenu.toggle()
+                            menuIcon.toggle()
+                            selection = .result
+                        }
+                    }, label: {
+                        Text(AppTextConstants.result)
+                            .foregroundColor(viewModel.resultButtonTapped ? buttonTappedColor : buttonColor)
+                    })
+                    Spacer()
+                }
+                .padding(.leading)
+                
+                Divider()
+            }
+            
+            if viewModel.showItem6 {
+                HStack {
+                    Button(action: {
+                        withAnimation {
+                            dropDownmenu.toggle()
+                            menuIcon.toggle()
+                            selection = .contract
+                        }
+                    }, label: {
+                        Text(AppTextConstants.contract)
+                            .foregroundColor(viewModel.contractButtonTapped ? buttonTappedColor : buttonColor)
+                    })
+                    Spacer()
+                }
+                .padding(.leading)
+                
+                Divider()
+            }
+
         }
         .foregroundColor(.black)
         .background(.white)

@@ -55,6 +55,10 @@ class AppTextConstants {
     
     static let package = "Πακέτα Εργασίας"
     
+    static let result = "Αποτελέσματα"
+    
+    static let contract = "Επικοινωνία"
+    
     
     // MARK: - PurposeView Texts
     
@@ -257,5 +261,17 @@ class AppTextConstants {
     
     static let packageViewText = "Πιλοτική  εγκατάσταση του ενοποιημένου συστήματος  σε διακομιστή  της επιχείρησης, σε πλαίσιο ελεγχόμενο (παράλληλα με τα άλλα συστήματα που θα αναπτυχθούν και λειτουργώντας επικουρικά). Αυτό θα δώσει  την δυνατότητα  να αξιολογηθούν τα άμεσα και έμμεσα  ποιοτικά χαρακτηριστικά της εφαρμογής (στατιστικά χρήσης των νέων λειτουργιών, αλλαγές συμπεριφοράς αγροτών και υπαλλήλων, βελτιωμένες  υπηρεσίες έγκαιρης πρόβλεψης κτλ.)"
     
-
+    
+    
+    // MARK: - ContractView Texts
+    
+    static let contractViewTitle = "Υπεύθυνοι Επικοινωνίας"
+    
+    static let contracts: [Contracts] =
+    [
+        Contracts(name: "Αλκιβιάδης Τσιμπίρης", projectRole: "Επιστημονικός Υπεύθυνος Έργου Αναπληρωτής Καθηγητής", phoneNumber: "+30 23210 49340", email: "atsimpiris@ihu.gr", website: "http://teachers.cm.ihu.gr/tsimpiris"),
+        Contracts(name: "Δημήτριος Βαρσάμης", projectRole: "Αναπληρωτής Επιστημονικός Υπεύθυνος Έργου Καθηγητής, Πρόεδρος τμήματος", phoneNumber: "+30 23210 49381", email: "dvarsam@ihu.gr", website: "http://teachers.cm.ihu.gr/dvarsam/"),
+        Contracts(name: "Αθανάσιος Αγγειοπλάστης", projectRole: "Υποψήφιος Διδάκτορας", phoneNumber: "+30 23210 49340", email: "aagiop@gmail.com", website: "")
+        
+    ]
 }

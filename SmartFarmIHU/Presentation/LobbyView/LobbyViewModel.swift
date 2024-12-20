@@ -13,7 +13,6 @@ class LobbyViewModel: ObservableObject {
     @Published var buttonIcon: String = "MenuBarIcon"
     @Published var buttonIcon2: Bool = false
     
-    
     func changeIconofMenu() {
         if buttonIcon == "MenuBarIcon" {
             buttonIcon = "CloseIcon"
@@ -21,12 +20,6 @@ class LobbyViewModel: ObservableObject {
             buttonIcon = "MenuBarIcon"
         }
     }
-    
-    func menuBarButtonTapped() {
-        
-    }
-    
-    
 }
 
 enum MenuSelection {
@@ -34,4 +27,6 @@ enum MenuSelection {
     case purpose
     case team
     case package
+    case result
+    case contract
 }

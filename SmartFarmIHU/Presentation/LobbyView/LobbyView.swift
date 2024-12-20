@@ -50,6 +50,10 @@ struct LobbyView: View {
                         TeamView()
                     } else if menuSelection == .package {
                         PackageView()
+                    } else if menuSelection == .result {
+//                        ResultView()
+                    } else if menuSelection == .contract {
+                        ContractView()
                     }
                     
                     LobbyFooterView()
