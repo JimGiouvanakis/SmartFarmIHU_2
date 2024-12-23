@@ -11,7 +11,9 @@ import SwiftUI
 
 class PurposeViewModel: ObservableObject {
     
-    @Published var buttonDiseasesTapped:Bool = false
+    @Published var buttonTapped:ButtonTapped = .buttonDiseases
+    
+    @Published var buttonDiseasesTapped:Bool = true
     @Published var buttonSmartFarmingTapped:Bool = false
     @Published var buttonΤechniquesTapped:Bool = false
     @Published var buttonChartTapped:Bool = false
@@ -24,36 +26,38 @@ class PurposeViewModel: ObservableObject {
         switch button {
         case .buttonDiseases:
             withAnimation {
-                buttonDiseasesTapped.toggle()
+                buttonTapped = .buttonDiseases
             }
         case .buttonSmartFarming:
             withAnimation {
-                buttonSmartFarmingTapped.toggle()
+                buttonTapped = .buttonSmartFarming
             }
         case .buttonΤechniques:
             withAnimation {
-                buttonΤechniquesTapped.toggle()
+                buttonTapped = .buttonΤechniques
             }
         case .buttonChart:
             withAnimation {
-                buttonChartTapped.toggle()
+                buttonTapped = .buttonChart
             }
         case .buttonGrowth:
             withAnimation {
-                buttonGrowthTapped.toggle()
+                buttonTapped = .buttonGrowth
             }
         case .buttonFind:
             withAnimation {
-                buttonFindTapped.toggle()
+                buttonTapped = .buttonFind
             }
         case .buttonMethodology:
             withAnimation {
-                buttonMethodologyTapped.toggle()
+                buttonTapped = .buttonMethodology
             }
         case .buttonDeveloping:
             withAnimation {
-                buttonDevelopingTapped.toggle()
+                buttonTapped = .buttonDeveloping
             }
+        case .noView:
+            buttonTapped = .noView
         }
     }
     
@@ -69,4 +73,5 @@ enum ButtonTapped {
     case buttonFind
     case buttonMethodology
     case buttonDeveloping
+    case noView
 }
