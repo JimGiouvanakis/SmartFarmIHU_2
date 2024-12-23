@@ -11,7 +11,7 @@ import SwiftUI
 struct LobbyView: View {
     
     @StateObject var viewModel = LobbyViewModel()
-
+    
     @State var dropDownmenu:Bool = false
     @State var menuSelection: MenuSelection = .home
     
@@ -51,7 +51,7 @@ struct LobbyView: View {
                     } else if menuSelection == .package {
                         PackageView()
                     } else if menuSelection == .result {
-//                        ResultView()
+                        //                        ResultView()
                     } else if menuSelection == .contract {
                         ContractView()
                     } else if menuSelection == .english {

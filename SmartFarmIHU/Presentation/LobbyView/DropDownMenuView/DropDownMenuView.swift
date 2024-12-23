@@ -140,7 +140,14 @@ struct DropDownMenuView: View {
                         withAnimation {
                             dropDownmenu.toggle()
                             menuIcon.toggle()
+                            
+                            /// Selection change to Home for the Text to refreshed
+                            if selection == .english {
+                                selection = .home
+                            } else {
                                 selection = .english
+                            }
+                            
                             viewModel.changeLanguage()
                         }
                     }, label: {
