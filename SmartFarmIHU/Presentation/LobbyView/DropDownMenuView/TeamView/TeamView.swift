@@ -8,61 +8,30 @@
 import SwiftUI
 
 struct TeamView: View {
+    
+    @StateObject var viewModel = TeamViewModel()
+    
     var body: some View {
         ScrollView {
-            VStack() {
-                ZStack {
-                    HStack {
-                        Text(AppTextConstants.team)
-                            .font(.title)
-                            .foregroundColor(Color.black)
-                            .padding(10)
-                        
-                        Spacer()
-                        
-                    }
-                }
-                .background(Color.App.headerGray)
+            VStack {
+                Text(AppTextConstants.team)
+                    .font(.title)
+                    .foregroundColor(Color.App.gray)
+                    .padding(10)
+                
             }
             
             ForEach(AppTextConstants.teamMembers, id: \.self) { member in
-                VStack{
-                    Image(member.image)
-                        .resizable()
-                        .frame(width: 350,height: 350)
-                    
-                    Spacer()
-                    
-                    Group {
-                        HStack {
-                            Text(member.name)
-                                .bold()
-                                .font(.title2)
-                                .foregroundColor(Color.App.green)
-                            
-                            Spacer()
-                        }
-                        
-                        Spacer ()
-                        
-                        HStack {
-                            Text(member.academicRole)
-                                .font(.title3)
-                            
-                            Spacer()
-                        }
-                        
-                        Spacer()
-                        
-                        HStack {
-                            Text(member.projectRole)
-                                .font(.title3)
-                            Spacer()
-                        }
-                    }
-                    .padding(.leading)
+                
+                if member.side {
+                    TeamRightView(member: member)
+                        .padding(.trailing,20)
+                } else {
+                    TeamLeftView(member: member)
+                        .padding(.leading,20)
                 }
             }
+            .padding(.vertical,10)
         }
     }
 }

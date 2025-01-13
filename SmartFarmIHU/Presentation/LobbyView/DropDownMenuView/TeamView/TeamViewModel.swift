@@ -9,8 +9,19 @@ import Foundation
 import SwiftUI
 
 
-class TeamViewModel {
+class TeamViewModel: ObservableObject {
     
+    var isLeft: Bool = true
+    
+    func changeSide() -> Bool {
+        if isLeft == true {
+            isLeft.toggle()
+            return true
+        } else {
+            isLeft.toggle()
+            return false
+        }
+    }
 }
 
 struct TeamStuct: Hashable {
@@ -18,4 +29,5 @@ struct TeamStuct: Hashable {
     var name: String
     var academicRole: String
     var projectRole: String
+    var side: Bool
 }

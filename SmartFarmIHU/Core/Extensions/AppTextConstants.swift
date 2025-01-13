@@ -495,27 +495,27 @@ class AppTextConstants {
     static var teamMembers: [TeamStuct] {
         if AppViewModel.shared.appLanguage == .greek {
             return [
-                TeamStuct(image: "Professor1", name: "ΑΛΚΙΒΙΆΔΗΣ ΤΣΙΜΠΊΡΗΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole: "Επιστημονικός Υπεύθυνος του έργου"),
-                TeamStuct(image: "Professor2", name: "ΔΗΜΉΤΡΙΟΣ ΒΑΡΣΆΜΗΣ", academicRole: "ΠΡΟΕΔΡΟΣ ΤΜΗΜΑΤΟΣ, ΑΝΑΠΛΗΡΩΤΗΣ ΚΑΘΗΓΗΤΗΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ"),
-                TeamStuct(image: "Professor3", name: "ΧΑΡΆΛΑΜΠΟΣ ΣΤΡΟΥΘΌΠΟΥΛΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ"),
-                TeamStuct(image: "Professor4", name: "ΧΕΙΛΆΣ ΚΩΣΤΑΝΤΊΝΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ"),
-                TeamStuct(image: "Professor5", name: "ΒΟΛΟΓΙΑΝΝΊΔΗΣ ΣΤΑΎΡΟΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ"),
-                TeamStuct(image: "Professor6", name: "ΚΟΥΓΙΟΥΜΤΖΉΣ ΔΗΜΉΤΡΙΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ ΤΜΉΜΑ ΗΜΜΗΥ, ΑΠΘ", projectRole:"Συνεργαζόμενα μέλη του Έργου"),
-                TeamStuct(image: "Professor7", name: "ΠΑΠΑΚΩΝΣΤΑΝΤΊΝΟΣ ΑΠΌΣΤΟΛΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ, ΠΑΝΕΠΙΣΤΉΜΙΟ ΚΎΠΡΟΥ", projectRole:"Συνεργαζόμενα μέλη του Έργου"),
-                TeamStuct(image: "Professor8", name: "ΚΟΥΝΆΝΗ ΑΡΙΣΤΈΑ", academicRole: "ΓΕΩΠΌΝΟΣ, ΥΠΟΨΉΦΙΙΑ ΔΙΔΆΚΤΟΡΑΣ", projectRole:"Συνεργαζόμενα μέλη του Έργου"),
-                TeamStuct(image: "Professor9", name: "ΑΓΓΕΙΟΠΛΆΣΤΗΣ ΑΘΑΝΆΣΙΟΣ", academicRole: "ΥΠΟΨΗΦΙΟΣ ΔΙΔΑΚΤΟΡΑΣ", projectRole:"Συνεργαζόμενα μέλη του Έργου"),
+                TeamStuct(image: "Professor1", name: "ΑΛΚΙΒΙΆΔΗΣ ΤΣΙΜΠΊΡΗΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole: "Επιστημονικός Υπεύθυνος του έργου", side: true),
+                TeamStuct(image: "Professor2", name: "ΔΗΜΉΤΡΙΟΣ ΒΑΡΣΆΜΗΣ", academicRole: "ΠΡΟΕΔΡΟΣ ΤΜΗΜΑΤΟΣ, ΑΝΑΠΛΗΡΩΤΗΣ ΚΑΘΗΓΗΤΗΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: false),
+                TeamStuct(image: "Professor3", name: "ΧΑΡΆΛΑΜΠΟΣ ΣΤΡΟΥΘΌΠΟΥΛΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: true),
+                TeamStuct(image: "Professor4", name: "ΧΕΙΛΆΣ ΚΩΣΤΑΝΤΊΝΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: false),
+                TeamStuct(image: "Professor5", name: "ΒΟΛΟΓΙΑΝΝΊΔΗΣ ΣΤΑΎΡΟΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: true),
+                TeamStuct(image: "Professor6", name: "ΚΟΥΓΙΟΥΜΤΖΉΣ ΔΗΜΉΤΡΙΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ ΤΜΉΜΑ ΗΜΜΗΥ, ΑΠΘ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: false),
+                TeamStuct(image: "Professor7", name: "ΠΑΠΑΚΩΝΣΤΑΝΤΊΝΟΣ ΑΠΌΣΤΟΛΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ, ΠΑΝΕΠΙΣΤΉΜΙΟ ΚΎΠΡΟΥ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: true),
+                TeamStuct(image: "Professor8", name: "ΚΟΥΝΆΝΗ ΑΡΙΣΤΈΑ", academicRole: "ΓΕΩΠΌΝΟΣ, ΥΠΟΨΉΦΙΙΑ ΔΙΔΆΚΤΟΡΑΣ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: false),
+                TeamStuct(image: "Professor9", name: "ΑΓΓΕΙΟΠΛΆΣΤΗΣ ΑΘΑΝΆΣΙΟΣ", academicRole: "ΥΠΟΨΗΦΙΟΣ ΔΙΔΑΚΤΟΡΑΣ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: true),
             ]
         } else {
             return [
-                TeamStuct(image: "Professor1", name: "ΑΛΚΙΒΙΆΔΗΣ ΤΣΙΜΠΊΡΗΣ", academicRole: "ASSISTANT PROFESSOR", projectRole: "Scientific Manager of the project"),
-                TeamStuct(image: "Professor2", name: "ΔΗΜΉΤΡΙΟΣ ΒΑΡΣΆΜΗΣ", academicRole: "DEPARTMENT CHAIR, ASSOCIATE PROFESSOR", projectRole:"Group of the Department of Informatics, Computers and Telecommunications Engineering of DIPAE"),
-                TeamStuct(image: "Professor3", name: "ΧΑΡΆΛΑΜΠΟΣ ΣΤΡΟΥΘΌΠΟΥΛΟΣ", academicRole: "PROFESSOR", projectRole:"Group of the Department of Informatics, Computers and Telecommunications Engineering of DIPAE"),
-                TeamStuct(image: "Professor4", name: "ΧΕΙΛΆΣ ΚΩΣΤΑΝΤΊΝΟΣ", academicRole: "PROFESSOR", projectRole:"Team of the Department of Informatics, Computers and Telecommunications Engineers of DIPAE"),
-                TeamStuct(image: "Professor5", name: "ΒΟΛΟΓΙΑΝΝΊΔΗΣ ΣΤΑΎΡΟΣ", academicRole: "ASSISTANT PROFESSOR", projectRole:"Team of the Department of Informatics, Computers and Telecommunications Engineers of DIPAE"),
-                TeamStuct(image: "Professor6", name: "ΚΟΥΓΙΟΥΜΤΖΉΣ ΔΗΜΉΤΡΙΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ ΤΜΉΜΑ ΗΜΜΗΥ, ΑΠΘ", projectRole:"Collaborating members of the Project"),
-                TeamStuct(image: "Professor7", name: "ΠΑΠΑΚΩΝΣΤΑΝΤΊΝΟΣ ΑΠΌΣΤΟΛΟΣ", academicRole: "PROFESSOR, UNIVERSITY OF CYPRUS", projectRole:"Collaborating members of the Project"),
-                TeamStuct(image: "Professor8", name: "ΚΟΥΝΆΝΗ ΑΡΙΣΤΈΑ", academicRole: "AGRICULTURIST, DOCTORAL CANDIDATE", projectRole:"Collaborating members of the Project"),
-                TeamStuct(image: "Professor9", name: "ΑΓΓΕΙΟΠΛΆΣΤΗΣ ΑΘΑΝΆΣΙΟΣ", academicRole: "DOCTORAL CANDIDATE", projectRole:"Collaborating members of the Project"),
+                TeamStuct(image: "Professor1", name: "ΑΛΚΙΒΙΆΔΗΣ ΤΣΙΜΠΊΡΗΣ", academicRole: "ASSISTANT PROFESSOR", projectRole: "Scientific Manager of the project", side: true),
+                TeamStuct(image: "Professor2", name: "ΔΗΜΉΤΡΙΟΣ ΒΑΡΣΆΜΗΣ", academicRole: "DEPARTMENT CHAIR, ASSOCIATE PROFESSOR", projectRole:"Group of the Department of Informatics, Computers and Telecommunications Engineering of DIPAE", side: false),
+                TeamStuct(image: "Professor3", name: "ΧΑΡΆΛΑΜΠΟΣ ΣΤΡΟΥΘΌΠΟΥΛΟΣ", academicRole: "PROFESSOR", projectRole:"Group of the Department of Informatics, Computers and Telecommunications Engineering of DIPAE", side: true),
+                TeamStuct(image: "Professor4", name: "ΧΕΙΛΆΣ ΚΩΣΤΑΝΤΊΝΟΣ", academicRole: "PROFESSOR", projectRole:"Team of the Department of Informatics, Computers and Telecommunications Engineers of DIPAE", side: false),
+                TeamStuct(image: "Professor5", name: "ΒΟΛΟΓΙΑΝΝΊΔΗΣ ΣΤΑΎΡΟΣ", academicRole: "ASSISTANT PROFESSOR", projectRole:"Team of the Department of Informatics, Computers and Telecommunications Engineers of DIPAE", side: true),
+                TeamStuct(image: "Professor6", name: "ΚΟΥΓΙΟΥΜΤΖΉΣ ΔΗΜΉΤΡΙΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ ΤΜΉΜΑ ΗΜΜΗΥ, ΑΠΘ", projectRole:"Collaborating members of the Project", side: false),
+                TeamStuct(image: "Professor7", name: "ΠΑΠΑΚΩΝΣΤΑΝΤΊΝΟΣ ΑΠΌΣΤΟΛΟΣ", academicRole: "PROFESSOR, UNIVERSITY OF CYPRUS", projectRole:"Collaborating members of the Project", side: true),
+                TeamStuct(image: "Professor8", name: "ΚΟΥΝΆΝΗ ΑΡΙΣΤΈΑ", academicRole: "AGRICULTURIST, DOCTORAL CANDIDATE", projectRole:"Collaborating members of the Project", side: false),
+                TeamStuct(image: "Professor9", name: "ΑΓΓΕΙΟΠΛΆΣΤΗΣ ΑΘΑΝΆΣΙΟΣ", academicRole: "DOCTORAL CANDIDATE", projectRole:"Collaborating members of the Project", side: true),
             ]
         }
     }
