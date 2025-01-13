@@ -10,16 +10,16 @@ import SwiftUI
 
 class LobbyViewModel: ObservableObject {
     
-    @Published var buttonIcon: String = "MenuBarIcon"
-    @Published var buttonIcon2: Bool = false
+//    @Published var buttonIcon: String = "globe"
+    @Published var buttonIcon: Bool = false
     
-    func changeIconofMenu() {
-        if buttonIcon == "MenuBarIcon" {
-            buttonIcon = "CloseIcon"
-        }else {
-            buttonIcon = "MenuBarIcon"
-        }
-    }
+//    func changeIconofMenu() {
+//        if buttonIcon == "globe" {
+//            buttonIcon = "globe.badge.chevron.backward"
+//        } else {
+//            buttonIcon = "globe"
+//        }
+//    }
     
 }
 

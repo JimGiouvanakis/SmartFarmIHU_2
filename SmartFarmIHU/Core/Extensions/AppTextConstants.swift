@@ -117,6 +117,11 @@ class AppTextConstants {
         : "Contract"
     }
     
+    static var information: String  { AppViewModel.shared.appLanguage == .greek
+        ? "Πληροφορίες"
+        : "Information"
+    }
+    
     static var english: String  { AppViewModel.shared.appLanguage == .greek
         ? "English"
         : "Greek"
