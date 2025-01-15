@@ -26,7 +26,7 @@ class TeamViewModel: ObservableObject {
     }
     
     func addDelay() -> Double {
-        delay += 0.1
+        delay += 0.6
         return delay
     }
 }

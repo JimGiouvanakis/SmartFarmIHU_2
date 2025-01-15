@@ -1,18 +1,19 @@
 //
-//  TeamLeftView.swift
+//  MemberCardView.swift
 //  SmartFarmIHU
 //
-//  Created by Dimitris Giouvanakis on 13/1/25.
+//  Created by Dimitris Giouvanakis on 15/1/25.
 //
 
 import SwiftUI
 
-struct TeamLeftView: View {
+struct MemberCardView: View {
     
     @State var member: TeamStuct
     
     var body: some View {
         HStack {
+            if member.side {
             Image(member.image)
                 .resizable()
                 .frame(width: 120,height: 120)
@@ -22,6 +23,7 @@ struct TeamLeftView: View {
                         .foregroundColor(Color.clear)
                     
                 )
+            }
             
             VStack(spacing: 5) {
                 HStack {
@@ -47,6 +49,19 @@ struct TeamLeftView: View {
                 }
             }
             .padding(.leading)
+            
+            if member.side == false {
+            Image(member.image)
+                .resizable()
+                .frame(width: 120,height: 120)
+                .cornerRadius(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .foregroundColor(Color.clear)
+                    
+                )
+            }
+            
         }
         .cornerRadius(20)
         .overlay(
@@ -59,6 +74,3 @@ struct TeamLeftView: View {
     }
 }
 
-#Preview {
-    TeamView()
-}

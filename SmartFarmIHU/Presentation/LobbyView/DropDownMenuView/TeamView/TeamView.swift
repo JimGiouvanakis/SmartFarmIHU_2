@@ -11,40 +11,50 @@ struct TeamView: View {
     
     @StateObject var viewModel = TeamViewModel()
     
-    @State var viewRightOffset: CGFloat = -500
-    @State var viewLeftOffset: CGFloat = 500
+    @State var viewRightOffset: CGFloat = -300
+    @State var opacity: Double = 0
+    @State var viewLeftOffset: CGFloat = 300
+    @State var headerOffset: CGFloat = -100
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-//            VStack {
-//                Text(AppTextConstants.team)
-//                    .font(.title)
-//                    .foregroundColor(Color.App.gray)
-//                    .padding(10)
-//                
-//            }
-            
-            ForEach(AppTextConstants.teamMembers, id: \.self) { member in
-
-                    if member.side {
-                        TeamRightView(member: member)
-                            .padding(.trailing,20)
-                            .offset(x: viewRightOffset)
-                            .onAppear {
-                                withAnimation(.easeOut(duration: 0.7)) {
-                                    viewRightOffset = 0
-                                }
+                
+                Text(AppTextConstants.team)
+                    .padding(6)
+                    .font(.system(size: 25, weight: .bold, design: .default))
+                    .foregroundStyle(Color.App.green)
+                    
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .foregroundColor(Color.App.buttonTappedGreen)
+                            .opacity(0.2)
+                    )
+                    .opacity(opacity)
+                    .offset(y: headerOffset)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            withAnimation(.easeOut(duration: 1)) {
+                                opacity = 1
+                                headerOffset = 0
                             }
-                    } else {
-                        TeamLeftView(member: member)
-                            .padding(.leading,20)
-                            .offset(x: viewLeftOffset)
-                            .onAppear {
-                                withAnimation(.easeOut(duration: 0.7)) {
-                                    viewLeftOffset = 0
-                                }
-                            }
+                        }
                     }
+                
+                ForEach(AppTextConstants.teamMembers, id: \.self) { member in
+                    MemberCardView(member: member)
+                        .padding(.leading, member.side ? 0 : 20)
+                        .padding(.trailing, member.side ? 20 : 0)
+                        .offset(x: member.side ? viewRightOffset : viewLeftOffset)
+                        .opacity(opacity)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                                withAnimation(.easeOut(duration: 0.8)) {
+                                    viewRightOffset = 0
+                                    viewLeftOffset = 0
+                                    opacity = 1
+                                }
+                            }
+                        }
                 }
                 
             }
@@ -57,5 +67,5 @@ struct TeamView: View {
 }
 
 #Preview {
-    TeamView()
+    LobbyView()
 }
