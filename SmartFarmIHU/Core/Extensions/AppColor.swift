@@ -67,7 +67,7 @@ extension Color {
         }
         
         static var buttonTappedGreen: Color {
-            Color(hex: "#108746")
+            Color(hex: "#22b063")
         }
         
         static var menuButtonGray: Color {

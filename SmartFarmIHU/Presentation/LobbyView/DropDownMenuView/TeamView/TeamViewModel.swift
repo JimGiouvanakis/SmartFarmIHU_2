@@ -13,6 +13,8 @@ class TeamViewModel: ObservableObject {
     
     var isLeft: Bool = true
     
+    var delay: Double = 0
+    
     func changeSide() -> Bool {
         if isLeft == true {
             isLeft.toggle()
@@ -21,6 +23,11 @@ class TeamViewModel: ObservableObject {
             isLeft.toggle()
             return false
         }
+    }
+    
+    func addDelay() -> Double {
+        delay += 0.1
+        return delay
     }
 }
 

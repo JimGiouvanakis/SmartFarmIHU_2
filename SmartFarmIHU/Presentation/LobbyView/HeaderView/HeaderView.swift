@@ -13,28 +13,35 @@ struct HeaderView: View {
     
     @Binding var buttonIcon: Bool
     
+    @Binding var menuSelection: MenuSelection
+    
     var body: some View {
-        HStack{
-            Image("MainPhoto")
-                .resizable()
-                .frame(width: 50,height: 50)
-                .cornerRadius(15)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .foregroundColor(Color.clear)
+        HStack {
+            Button(action: {
+                menuSelection = .home
+            },
+                   label: {
+                Image("MainPhoto")
+                    .resizable()
+                    .frame(width: 50,height: 50)
+                    .cornerRadius(15)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundColor(Color.clear)
+                        
+                    )
+                VStack(spacing: 0) {
+                    Text("SmartFarm")
+                        .font(.system(size: 25))
+                        .foregroundColor(Color.App.green)
                     
-                )
-            VStack(spacing: 0) {
-                Text("SmartFarm")
-                    .font(.system(size: 25))
-                    .foregroundColor(Color.App.green)
-                
-                Text("Powerd by IHU")
-                    .font(.system(size: 15))
-                    .foregroundColor(Color.App.green)
-                    .opacity(0.5)
-                
-            }
+                    Text("Powerd by IHU")
+                        .font(.system(size: 15))
+                        .foregroundColor(Color.App.green)
+                        .opacity(0.5)
+                    
+                }
+            })
             
             Spacer()
             

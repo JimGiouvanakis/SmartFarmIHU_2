@@ -11,14 +11,15 @@ struct HomeView: View {
     var body: some View {
             VStack {
                 Group {
-                    Image("MainPhoto")
+                    Image("MainHomePagePhoto")
                         .resizable()
-                        .frame(width: 350, height: 300)
-                        .padding(.bottom)
+                        .frame(width: UIScreen.main.bounds.width - 50, height: 450)
+                        .cornerRadius(20)
+                        .padding(.vertical)
                     
                     Text(AppTextConstants.LobbyHeader)
                         .font(.headline)
-                        .foregroundColor(Color.App.green)
+                        .foregroundColor(Color.App.buttonTappedGreen)
                     
                     Button(action: {
                         
@@ -26,10 +27,12 @@ struct HomeView: View {
                         Text(AppTextConstants.LobbyButton)
                         
                     })
+                    .frame(width: UIScreen.main.bounds.width - 50, height: 100)
                     .buttonStyle(.borderedProminent)
-                    .tint(Color.App.buttonBlue)
+                    .tint(Color.App.green)
                     .foregroundColor(.white)
                     .buttonBorderShape(.roundedRectangle)
+                    
                     
                     Text(AppTextConstants.LobbyButtonSubTittle)
                         .font(.headline)
@@ -44,5 +47,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    LobbyView()
 }

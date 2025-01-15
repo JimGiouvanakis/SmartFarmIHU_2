@@ -19,7 +19,7 @@ struct LobbyView: View {
         VStack {
             
             HStack {
-                HeaderView(dropDownmenu: $dropDownmenu, buttonIcon: $dropDownmenu)
+                HeaderView(dropDownmenu: $dropDownmenu, buttonIcon: $dropDownmenu, menuSelection: $menuSelection)
                     .padding(.top,50)
                 
                 Spacer()
