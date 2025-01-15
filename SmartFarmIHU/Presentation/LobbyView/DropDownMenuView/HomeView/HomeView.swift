@@ -9,40 +9,44 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-            VStack {
-                Group {
-                    Image("MainHomePagePhoto")
-                        .resizable()
-                        .frame(width: UIScreen.main.bounds.width - 50, height: 450)
-                        .cornerRadius(20)
-                        .padding(.vertical)
+        VStack {
+            Image("MainHomePagePhoto")
+                .resizable()
+                .frame(width: UIScreen.main.bounds.width - 50, height: 450)
+                .cornerRadius(20)
+                .padding(.vertical)
+            
+            Text(AppTextConstants.LobbyHeader)
+                .font(.system(size: 16))
+                .foregroundColor(Color.App.green)
+                .padding(.bottom, 10)
+            
+          
+            Button(action: {
+                
+            }, label: {
+                Text(AppTextConstants.LobbyButton)
+                    .font(.system(size: 19,weight: .bold))
+                    .frame(width: UIScreen.main.bounds.width - 50)
+                    .frame(height: 60)
+                    .foregroundColor(Color.white)
+                
+            })
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.App.green)
                     
-                    Text(AppTextConstants.LobbyHeader)
-                        .font(.headline)
-                        .foregroundColor(Color.App.buttonTappedGreen)
-                    
-                    Button(action: {
-                        
-                    }, label: {
-                        Text(AppTextConstants.LobbyButton)
-                        
-                    })
-                    .frame(width: UIScreen.main.bounds.width - 50, height: 100)
-                    .buttonStyle(.borderedProminent)
-                    .tint(Color.App.green)
-                    .foregroundColor(.white)
-                    .buttonBorderShape(.roundedRectangle)
-                    
-                    
-                    Text(AppTextConstants.LobbyButtonSubTittle)
-                        .font(.headline)
-                        .foregroundColor(Color.App.green)
-                        .padding(.bottom)
-                    
-                    TextView()
-                }
-                .padding([.leading,.trailing])
-            }
+            )
+            .shadow(color: Color.App.green.opacity(0.3),radius: 10, x: 0, y: 10)
+            .padding(.bottom, 10)
+            
+            Text(AppTextConstants.TextViewText)
+                .font(.system(size: 17))
+                .foregroundColor(Color.App.gray)
+
+//            TextView()
+        }
+        .padding([.leading,.trailing])
     }
 }
 
