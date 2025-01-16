@@ -12,7 +12,7 @@ struct CustomTabView: View {
     @Binding var menuSelection: MenuSelection
     
     var body: some View {
-        HStack {
+        HStack(spacing: 40) {
                 Button(action: {
                     menuSelection = .home
                 }) {
@@ -20,27 +20,33 @@ struct CustomTabView: View {
                     Image(systemName: "house")
                         .resizable()
                         .frame(width: 30 , height: 30)
-                    
-                    Text(AppTextConstants.home)
                 }
-                    .bold()
-                    .foregroundColor(menuSelection == .home ? Color.App.buttonTappedGreen : Color.gray)
-                    .padding(.trailing,30)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(menuSelection == .home ?  Color.App.buttonTappedGreen : Color.clear)
+                            .frame(width: 80, height: 50)
+                    )
+                    
+                    .foregroundColor(Color.black)
+                    .padding(.leading,10)
             }
             
             Button(action: {
                 menuSelection = .purpose
             }) {
                 VStack {
-                    Image(systemName: "book")
+                    Image(systemName: "book.pages")
                         .resizable()
                         .frame(width: 30 , height: 30)
-                    
-                    Text(AppTextConstants.information)
                 }
-                .bold()
-                .foregroundColor(menuSelection == .purpose ? Color.App.buttonTappedGreen : Color.gray)
-                .padding(.trailing,15)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(menuSelection == .purpose ?  Color.App.buttonTappedGreen : Color.clear)
+                        .frame(width: 80, height: 50)
+                )
+                
+                .foregroundColor(Color.black)
+                .padding(.horizontal, 40)
             }
             
             Button(action: {
@@ -49,15 +55,20 @@ struct CustomTabView: View {
                 VStack {
                     Image(systemName: "person.3")
                         .resizable()
-                        .frame(width: 50 , height: 30)
-                    
-                    Text(AppTextConstants.team)
+                        .frame(width: 60 , height: 30)
+                
                 }
-                .bold()
-                .foregroundColor(menuSelection == .team ? Color.App.buttonTappedGreen : Color.gray)
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(menuSelection == .team ?  Color.App.buttonTappedGreen : Color.clear)
+                        .frame(width: 80, height: 50)
+                )
+                
+                .foregroundColor(Color.black)
+                .padding(.trailing,10)
             }
         }
-        .frame(width: 400,height: 65)
+        .frame(width: 400,height: 50)
         .background(Color.white)
 
     }

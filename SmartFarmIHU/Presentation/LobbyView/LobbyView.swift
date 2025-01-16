@@ -13,7 +13,7 @@ struct LobbyView: View {
     @StateObject var viewModel = LobbyViewModel()
     
     @State var dropDownmenu:Bool = false
-    @State var menuSelection: MenuSelection = .home
+    @State var menuSelection: MenuSelection = .purpose
     
     var body: some View {
         VStack {
@@ -46,7 +46,7 @@ struct LobbyView: View {
                     if menuSelection == .home {
                         HomeView()
                     } else if menuSelection == .purpose {
-                        PurposeView()
+                        InformationView()
                     } else if menuSelection == .team {
                         TeamView()
                     } else if menuSelection == .package {

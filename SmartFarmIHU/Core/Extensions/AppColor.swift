@@ -60,6 +60,21 @@ extension Color {
             Color(hex: "#dcdce1")
         }
         
+        // MARK: - Info View Colors
+        
+        static var backgroundGreen: Color {
+            Color(hex: "#6b9b6b")
+        }
+        
+        static var backgroundGreen2: Color {
+            Color(hex: "#b2c9ad")
+        }
+        
+        static var backgroundGreen3: Color {
+            Color(hex: "#abd5b7")
+        }
+        
+        
         // MARK: - Button Colors
         
         static var buttonBlue: Color {
