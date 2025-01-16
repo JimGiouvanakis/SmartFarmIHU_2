@@ -16,7 +16,6 @@ struct HeaderView: View {
     @Binding var menuSelection: MenuSelection
     
     var body: some View {
-        HStack {
             Button(action: {
                 menuSelection = .home
             },
@@ -42,20 +41,6 @@ struct HeaderView: View {
                     
                 }
             })
-            
-            Spacer()
-            
-            Button(action: {
-                dropDownmenu.toggle()
-            }) {
-                Image(systemName: buttonIcon ? "globe.badge.chevron.backward" : "globe")
-                    .resizable()
-                    .frame(width: buttonIcon ?  35 : 30 ,height: buttonIcon ? 35 : 30)
-                    .foregroundColor(Color.App.green)
-                    .opacity(0.8)
-            }
-            .padding(.trailing)
-        }
     }
 }
 
