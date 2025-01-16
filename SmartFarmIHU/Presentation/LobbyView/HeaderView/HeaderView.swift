@@ -31,11 +31,11 @@ struct HeaderView: View {
                     )
                 VStack(spacing: 0) {
                     Text("SmartFarm")
-                        .font(.system(size: 25))
+                        .font(.system(size: 25,weight: .bold))
                         .foregroundColor(Color.App.green)
                     
                     Text("Powerd by IHU")
-                        .font(.system(size: 15))
+                        .font(.system(size: 15,weight: .bold))
                         .foregroundColor(Color.App.green)
                         .opacity(0.5)
                     

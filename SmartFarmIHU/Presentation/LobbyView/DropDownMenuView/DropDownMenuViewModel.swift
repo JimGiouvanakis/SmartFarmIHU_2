@@ -27,23 +27,25 @@ class DropDownMenuViewModel: ObservableObject {
     @Published var englishButtonTapped:Bool = false
     
     func addDelay() {
-        withAnimation {
-            self.showHomeButton.toggle()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            withAnimation {
+                self.showHomeButton.toggle()
+            }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
             withAnimation {
                 self.showPurposeButton.toggle()
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             withAnimation {
                 self.showTeamButton.toggle()
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
             withAnimation {
                 self.showItem4.toggle()
             }

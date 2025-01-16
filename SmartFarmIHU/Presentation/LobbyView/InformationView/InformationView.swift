@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InformationView: View {
+    
+    @StateObject var viewModel = InformationViewModel()
+    
     var body: some View {
         VStack {
             HStack {
@@ -24,98 +27,107 @@ struct InformationView: View {
                     makeGlobalConferences()
                     
                     makeLocalConferences()
+                    
                 }
+                
+                makeMagaZines()
             }
         }
         .padding(.vertical,10)
+        .onAppear {
+            viewModel.addDelay()
+        }
     }
     
     
     @ViewBuilder
     func makeSmartAgriculture() -> some View {
         VStack {
-            VStack {
-                Text("Εξυπνη Γεωργία")
-                    .padding(10)
-                    .font(.system(size: 16, weight: .bold))
-                
-                Text("Η Έξυπνη Γεωργία, ή αλλιώς Ευφυής Γεωργία, αποτελεί μια σύγχρονη προσέγγιση της κλασικής γεωργίας. Συνδυάζει τεχνολογίες αιχμής, αισθητήρες και ανάλυση δεδομένων για τη βελτιστοποίηση των αγροτικών δραστηριοτήτων")
-                    .font(.system(size: 14, weight: .regular))
-                    .padding(.horizontal,10)
-                    .padding(.bottom,10)
-            }
-            .background (
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.App.backgroundGreen)
-                    .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
-            )
-            .frame(width: UIScreen.main.bounds.width - 220)
+                VStack {
+                    Text("Εξυπνη Γεωργία")
+                        .padding(10)
+                        .font(.system(size: 16, weight: .bold))
+                    
+                    Text("Η Έξυπνη Γεωργία, ή αλλιώς Ευφυής Γεωργία, αποτελεί μια σύγχρονη προσέγγιση της κλασικής γεωργίας. Συνδυάζει τεχνολογίες αιχμής, αισθητήρες και ανάλυση δεδομένων για τη βελτιστοποίηση των αγροτικών δραστηριοτήτων")
+                        .font(.system(size: 14, weight: .regular))
+                        .padding(.horizontal,10)
+                        .padding(.bottom,10)
+                }
+                .background (
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.App.backgroundGreen)
+                        .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
+                )
+                .frame(width: UIScreen.main.bounds.width - 220)
+                .opacity(viewModel.showFirstItem ? 1 : 0)
             
-            Image("paper")
-                .resizable()
-                .frame(width: UIScreen.main.bounds.width - 230,height: 150 )
-                .padding(.top,5)
-                .cornerRadius(20)
+
+                Image("paper")
+                    .resizable()
+                    .frame(width: UIScreen.main.bounds.width - 230,height: 150 )
+                    .padding(.top,5)
+                    .cornerRadius(20)
+                    .opacity(viewModel.showFourthItem ? 1 : 0)
         }
     }
     
     @ViewBuilder
     func makeWinningsAndDiseases() -> some View {
         VStack {
-            VStack {
-                Text("Τι κερδίζουμε? ")
-                    .padding(.top,8)
-                    .padding(.bottom,1)
-                    .font(.system(size: 16, weight: .bold))
-                VStack(alignment: .leading) {
-                    
-                    Text("• Μειώνεται το ρίσκο των καλλιεργειών")
-                        .font(.system(size: 14, weight: .regular))
-                        .padding(.horizontal,10)
-                    
-                    Text("• Αυξάνεται η ποιότητα και η απόδοση των προϊόντων")
-                        .font(.system(size: 14, weight: .regular))
-                        .padding(.horizontal,10)
-                    
-                    Text("• Ενημέρωση πορείας ή προβλήματος σε πραγματικό χρόνο")
-                        .font(.system(size: 14, weight: .regular))
-                        .padding(.horizontal,10)
-                        .padding(.bottom,10)
+                VStack {
+                    Text("Τι κερδίζουμε? ")
+                        .padding(.top,8)
+                        .padding(.bottom,1)
+                        .font(.system(size: 16, weight: .bold))
+                    VStack(alignment: .leading) {
+                        
+                        Text("• Μειώνεται το ρίσκο των καλλιεργειών")
+                            .font(.system(size: 14, weight: .regular))
+                            .padding(.horizontal,10)
+                        
+                        Text("• Αυξάνεται η ποιότητα και η απόδοση των προϊόντων")
+                            .font(.system(size: 14, weight: .regular))
+                            .padding(.horizontal,10)
+                        
+                        Text("• Ενημέρωση πορείας ή προβλήματος σε πραγματικό χρόνο")
+                            .font(.system(size: 14, weight: .regular))
+                            .padding(.horizontal,10)
+                            .padding(.bottom,10)
+                    }
                 }
-            }
-            .frame(width: UIScreen.main.bounds.width - 220)
-            .cornerRadius(20)
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.App.gray, lineWidth: 1)
-                    .shadow(color: Color.App.green.opacity(1), radius: 3, x: 3, y: 5)
-            )
-            
-            VStack {
-                Text("Ασθένειες")
-                    .padding(.top,8)
-                    .padding(.bottom,1)
-                    .font(.system(size: 16, weight: .bold))
-                
-                VStack(alignment: .leading) {
-                    Text("• Προκαλούν σημαντική μείωση στη φυσική και οικονομική παραγωγικότητα")
-                        .font(.system(size: 14, weight: .regular))
-                        .padding(.horizontal,10)
-                    
-                    Text("• Μπορούν να οδηγήσουν σε απώλεια καλλιεργειών, αν δεν εντοπιστούν και αντιμετωπιστούν έγκαιρα")
-                        .font(.system(size: 14, weight: .regular))
-                        .padding(.horizontal,10)
-                        .padding(.bottom,10)
-                }
-                
-            }
-            .background (
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.App.backgroundGreen3)
-                    .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
-            )
-            .frame(width: UIScreen.main.bounds.width - 220)
+                .frame(width: UIScreen.main.bounds.width - 220)
+                .cornerRadius(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.App.gray, lineWidth: 1)
+                        .shadow(color: Color.App.green.opacity(1), radius: 3, x: 3, y: 5)
+                )
+                .opacity(viewModel.showThirdItem ? 1 : 0)
 
+                VStack {
+                    Text("Ασθένειες")
+                        .padding(.top,8)
+                        .padding(.bottom,1)
+                        .font(.system(size: 16, weight: .bold))
+                    
+                    VStack(alignment: .leading) {
+                        Text("• Προκαλούν σημαντική μείωση στη φυσική και οικονομική παραγωγικότητα")
+                            .font(.system(size: 14, weight: .regular))
+                            .padding(.horizontal,10)
+                        
+                        Text("• Μπορούν να οδηγήσουν σε απώλεια καλλιεργειών, αν δεν εντοπιστούν και αντιμετωπιστούν έγκαιρα")
+                            .font(.system(size: 14, weight: .regular))
+                            .padding(.horizontal,10)
+                            .padding(.bottom,10)
+                    }
+                }
+                .background (
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.App.backgroundGreen3)
+                        .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
+                )
+                .frame(width: UIScreen.main.bounds.width - 220)
+                .opacity(viewModel.showSecondItem ? 1 : 0)
 
         }
     }
@@ -141,6 +153,7 @@ struct InformationView: View {
                 .shadow(color: Color.App.gray.opacity(0.5), radius: 3, x: 3, y: 5)
         )
         .frame(width: UIScreen.main.bounds.width - 20)
+        .opacity(viewModel.showFourthItem ? 1 : 0)
     }
     
     @ViewBuilder
@@ -166,6 +179,7 @@ struct InformationView: View {
                 .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
         )
         .frame(width: UIScreen.main.bounds.width - 220)
+        .opacity(viewModel.showSeventhItem ? 1 : 0)
     }
     
     @ViewBuilder
@@ -194,6 +208,7 @@ struct InformationView: View {
                 .stroke(Color.App.gray, lineWidth: 1)
                 .shadow(color: Color.App.green.opacity(1), radius: 3, x: 3, y: 5)
         )
+        .opacity(viewModel.showSixthItem ? 1 : 0)
     }
     
     @ViewBuilder
@@ -221,12 +236,13 @@ struct InformationView: View {
                     .padding(.bottom,10)
             }
         }
-        .frame(width: UIScreen.main.bounds.width - 20)
         .background (
             RoundedRectangle(cornerRadius: 20)
                 .fill(Color.App.backgroundGreen)
                 .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
         )
+        .frame(width: UIScreen.main.bounds.width - 20)
+        .opacity(viewModel.showEighthItem ? 1 : 0)
     }
 }
 
