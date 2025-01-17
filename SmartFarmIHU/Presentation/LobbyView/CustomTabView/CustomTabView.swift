@@ -40,7 +40,7 @@ struct CustomTabView: View {
                 Color.white
                 
                 Button(action: {
-                    menuSelection = .purpose
+                    menuSelection = .information
                 }) {
                     VStack {
                         Image(systemName: "book.pages")
@@ -49,7 +49,7 @@ struct CustomTabView: View {
                     }
                     .background(
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(menuSelection == .purpose ?  Color.App.buttonTappedGreen : Color.clear)
+                            .fill(menuSelection == .information ?  Color.App.buttonTappedGreen : Color.clear)
                             .frame(width: 80, height: 50)
                     )
                     
@@ -86,7 +86,6 @@ struct CustomTabView: View {
         .background(Color.white)
         
     }
-    
 }
 
 #Preview {

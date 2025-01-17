@@ -10,25 +10,11 @@ import SwiftUI
 
 class LobbyViewModel: ObservableObject {
     
-//    @Published var buttonIcon: String = "globe"
     @Published var buttonIcon: Bool = false
-    
-//    func changeIconofMenu() {
-//        if buttonIcon == "globe" {
-//            buttonIcon = "globe.badge.chevron.backward"
-//        } else {
-//            buttonIcon = "globe"
-//        }
-//    }
-    
 }
 
 enum MenuSelection {
     case home
-    case purpose
+    case information
     case team
-    case package
-    case result
-    case contract
-    case english
 }

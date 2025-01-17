@@ -20,18 +20,14 @@ struct SplashScreenView: View {
             ZStack {
                 VStack {
                     VStack {
-                        Image("MainPhoto")
-                            .resizable()
-                            .frame(width: 150,height: 150)
-                            .cornerRadius(20)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .foregroundColor(Color.clear)
-                                
-                            )
-                        Text("SmartFarm")
-                            .font(.system(size: 50))
+                        Text(AppTextConstants.AppTitle)
+                            .font(.system(size: 50,weight: .bold))
                             .foregroundColor(Color.App.green)
+                        
+                        Text(AppTextConstants.AppSubTittle)
+                            .font(.system(size: 25,weight: .bold))
+                            .foregroundColor(Color.App.green)
+                            .opacity(0.6)
                     }
                     .scaleEffect(size)
                     .opacity(opacity)
@@ -43,12 +39,11 @@ struct SplashScreenView: View {
                     }
                 }
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
                         self.isActive = true
                     }
                 }
             }
-            
         }
     }
 }
