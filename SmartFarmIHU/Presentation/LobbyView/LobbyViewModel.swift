@@ -17,5 +17,4 @@ enum MenuSelection {
     case home
     case information
     case team
-    case webView
 }

@@ -15,6 +15,8 @@ struct LobbyView: View {
     @State var dropDownmenu:Bool = false
     @State var menuSelection: MenuSelection = .home
     
+    @State var openSheet: Bool = false
+    
     var body: some View {
         VStack {
             HStack {
@@ -27,22 +29,22 @@ struct LobbyView: View {
             ScrollView {
                 VStack {
                     if menuSelection == .home {
-                        HomeView(menuSelection: $menuSelection)
+                        HomeView(menuSelection: $menuSelection, openSheet: $openSheet)
                     } else if menuSelection == .information {
                         InformationView()
                     } else if menuSelection == .team {
                         TeamView()
-                    } else if menuSelection == .webView {
-                        WebView()
-                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                    }
-                }
+                    }                }
             }
             CustomTabView(menuSelection: $menuSelection)
         }
         .padding(10)
         .ignoresSafeArea()
         .background(.white)
+        .sheet(isPresented: $openSheet) {
+            WebView()
+                .ignoresSafeArea()
+        }
     }
 }
 

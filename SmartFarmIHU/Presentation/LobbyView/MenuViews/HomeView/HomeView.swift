@@ -13,6 +13,8 @@ struct HomeView: View {
     
     @Binding var menuSelection: MenuSelection
     
+    @Binding var openSheet: Bool
+    
     var body: some View {
         VStack {
             Image(AppTextConstants.MainPhotoHomePage)
@@ -27,7 +29,7 @@ struct HomeView: View {
                 .padding(.bottom, 10)
             
             Button(action: {
-                menuSelection = .webView
+                openSheet.toggle()
             }, label: {
                 Text(AppTextConstants.HomeViewButton)
                     .font(.system(size: 19,weight: .bold))
