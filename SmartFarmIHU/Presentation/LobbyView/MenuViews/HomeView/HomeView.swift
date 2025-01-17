@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @StateObject var viewModel = HomeViewModel()
     
+    @Binding var menuSelection: MenuSelection
+    
     var body: some View {
         VStack {
             Image(AppTextConstants.MainPhotoHomePage)
@@ -20,12 +22,12 @@ struct HomeView: View {
                 .padding(.vertical)
             
             Text(AppTextConstants.HomeViewTitle)
-                .font(.system(size: 16))
+                .font(.system(size: 17))
                 .foregroundColor(Color.App.green)
                 .padding(.bottom, 10)
             
             Button(action: {
-                
+                menuSelection = .webView
             }, label: {
                 Text(AppTextConstants.HomeViewButton)
                     .font(.system(size: 19,weight: .bold))
@@ -43,7 +45,7 @@ struct HomeView: View {
             .padding(.bottom, 10)
             
             Text(AppTextConstants.HomeViewSubTittle)
-                .font(.system(size: 17))
+                .font(.system(size: 16))
                 .foregroundColor(Color.App.gray)
         }
         .padding([.leading,.trailing])

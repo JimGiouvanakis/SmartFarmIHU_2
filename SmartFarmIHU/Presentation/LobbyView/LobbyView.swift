@@ -27,11 +27,14 @@ struct LobbyView: View {
             ScrollView {
                 VStack {
                     if menuSelection == .home {
-                        HomeView()
+                        HomeView(menuSelection: $menuSelection)
                     } else if menuSelection == .information {
                         InformationView()
                     } else if menuSelection == .team {
                         TeamView()
+                    } else if menuSelection == .webView {
+                        WebView()
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                     }
                 }
             }
