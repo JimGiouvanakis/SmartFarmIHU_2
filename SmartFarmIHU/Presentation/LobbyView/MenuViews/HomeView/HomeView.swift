@@ -55,7 +55,6 @@ struct HomeView: View {
         .onAppear() {
             viewModel.addDelay()
         }
-        
     }
 }
 
