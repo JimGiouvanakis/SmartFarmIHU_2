@@ -12,7 +12,6 @@ struct LobbyView: View {
     
     @StateObject var viewModel = LobbyViewModel()
     
-    @State var dropDownmenu:Bool = false
     @State var menuSelection: MenuSelection = .home
     
     @State var openSheet: Bool = false
@@ -20,7 +19,7 @@ struct LobbyView: View {
     var body: some View {
         VStack {
             HStack {
-                HeaderView(dropDownmenu: $dropDownmenu, buttonIcon: $dropDownmenu, menuSelection: $menuSelection)
+                HeaderView(menuSelection: $menuSelection)
                     .padding(.top,50)
                 
                 Spacer()

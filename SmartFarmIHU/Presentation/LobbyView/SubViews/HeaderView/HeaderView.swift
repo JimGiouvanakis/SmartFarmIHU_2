@@ -9,10 +9,6 @@ import SwiftUI
 
 struct HeaderView: View {
     
-    @Binding var dropDownmenu:Bool
-    
-    @Binding var buttonIcon: Bool
-    
     @Binding var menuSelection: MenuSelection
     
     var body: some View {
