@@ -31,10 +31,3 @@ class TeamViewModel: ObservableObject {
     }
 }
 
-struct TeamStuct: Hashable {
-    var image:String
-    var name: String
-    var academicRole: String
-    var projectRole: String
-    var side: Bool
-}

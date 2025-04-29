@@ -70,3 +70,7 @@ struct MemberCardView: View {
     }
 }
 
+#Preview {
+    MemberCardView(member:  TeamStuct(image: "Professor1", name: "ΑΛΚΙΒΙΆΔΗΣ ΤΣΙΜΠΊΡΗΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole: "Επιστημονικός Υπεύθυνος του έργου", side: true))
+}
+
