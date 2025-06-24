@@ -34,4 +34,7 @@ In the repository you can find the MP4 version of the video.
 - This project is part of my university diploma thesis.
 - The goal is to provide a mobile version of the SmartFarm website with enhanced functionality and usability.
 
+### Version
+
+- v1.0.0
 
