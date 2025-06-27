@@ -1,5 +1,5 @@
 //
-//  SplashScreenView.swift
+//  SplashView.swift
 //  SmartFarmIHU
 //
 //  Created by Dimitris Giouvanakis on 13/1/25.
@@ -7,23 +7,39 @@
 
 import SwiftUI
 
-struct SplashScreenView: View {
+struct SplashView: View {
+    
+    // MARK: - Properties
     
     @State private var isActive = false
     @State private var size = 0.6
     @State private var opacity = 0.5
     
+    // MARK: - View
+    
     var body: some View {
+        ZStack {
+            
+            Color.App.white
+                
+            self.makeMainView()
+        }
+    }
+    
+    // MARK: - ViewBuilders
+    
+    @ViewBuilder
+    private func makeMainView() -> some View {
         if isActive {
             LobbyView(resetApp: $isActive)
         } else {
             VStack {
                 VStack(alignment: .leading) {
-                    Text(AppTextConstants.AppTitle)
+                    Text(ViewStrings.title.localized)
                         .font(.system(size: 50,weight: .bold))
                         .foregroundColor(Color.App.green)
                     
-                    Text(AppTextConstants.AppSubTittle)
+                    Text(ViewStrings.subtitle.localized)
                         .font(.system(size: 25,weight: .bold))
                         .foregroundColor(Color.App.green)
                         .opacity(0.6)
@@ -45,10 +61,31 @@ struct SplashScreenView: View {
                     self.opacity = 0.5
                 }
             }
+            .background(Color.App.white)
+        }
+    }
+    
+    // MARK: - Methods
+    
+    // ..
+}
+
+// MARK: - Localization
+
+extension SplashView {
+    enum ViewStrings: String, LocalizableProtocol {
+        
+        //  MARK: - SplashView
+        
+        case title                              = "app_title"
+        case subtitle                           = "app_subTitle"
+        
+        var tableName: String {
+            "Localizable"
         }
     }
 }
 
 #Preview {
-    SplashScreenView()
+    SplashView()
 }

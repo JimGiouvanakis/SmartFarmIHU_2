@@ -41,6 +41,10 @@ extension Color {
         
         // MARK: - Main App Colors
         
+        static var white: Color {
+            Color(hex: "#ffffff")
+        }
+        
         static var green: Color {
             Color(hex: "#0e8747")
         }

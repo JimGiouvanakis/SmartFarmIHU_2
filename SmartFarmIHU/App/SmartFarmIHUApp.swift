@@ -12,7 +12,7 @@ struct SmartFarmIHUApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SplashScreenView()
+            SplashView()
         }
     }
 }
