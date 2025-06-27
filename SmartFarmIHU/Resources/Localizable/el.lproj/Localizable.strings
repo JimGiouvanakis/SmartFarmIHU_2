@@ -18,3 +18,43 @@
 "homeView_button_title" = "Ανίχνευση Ασθένειας Φυτών";
 
 "homeView_subtitle" = "Αυτό το έργο επικεντρώνεται στην ανάπτυξη καινοτόμων εφαρμογών βαθιάς μάθησης και μοντέλων για την εκτίμηση της ανάπτυξης των φυτών μέσω δεδομένων εικόνας. Δημιουργούμε μια διαδικτυακή εφαρμογή που επιτρέπει στους αγρότες να ανεβάζουν φωτογραφίες των φυτών ή των καλλιεργειών τους και να λαμβάνουν ως απάντηση, μέσω του εκπαιδευμένου μοντέλου, την αντίστοιχη διάταξη που θα τους βοηθήσει να λάβουν αποφάσεις για την ανάπτυξη τους.";
+
+// MARK: - InformationView
+
+"infoView_smartArgi_title" = "Εξυπνη Γεωργία";
+
+"infoView_smartArgi_subtitle"   = "Η Έξυπνη Γεωργία, ή αλλιώς Ευφυής Γεωργία, αποτελεί μια σύγχρονη προσέγγιση της κλασικής γεωργίας. Συνδυάζει τεχνολογίες αιχμής, αισθητήρες και ανάλυση δεδομένων για τη βελτιστοποίηση των αγροτικών δραστηριοτήτων";
+
+"infoView_winnings_title" = "Τι κερδίζουμε? ";
+
+"infoView_winnings_list1" = "• Μειώνεται το ρίσκο των καλλιεργειών";
+"infoView_winnings_list2" = "• Αυξάνεται η ποιότητα και η απόδοση των προϊόντων";
+"infoView_winnings_list3" = "• Ενημέρωση πορείας ή προβλήματος σε πραγματικό χρόνο";
+
+"infoView_diseases_title" = "Ασθένειες";
+
+"infoView_diseases_list1" = "• Προκαλούν σημαντική μείωση στη φυσική και οικονομική παραγωγικότητα";
+
+"infoView_diseases_list2" =  "• Μπορούν να οδηγήσουν σε απώλεια καλλιεργειών, αν δεν εντοπιστούν και αντιμετωπιστούν έγκαιρα";
+
+"inforView_package_title" = "Πακέτα Εργασίας";
+
+"inforView_package_subtitle"  = "Το έργο περιλαμβάνει τη σχεδίαση αρχιτεκτονικής, την ανάπτυξη αλγορίθμων βαθιάς μάθησης και την ενσωμάτωσή τους σε διαδικτυακή εφαρμογή με λειτουργίες αυτοματισμού. Διασφαλίζεται η ποιότητα και ασφάλεια δεδομένων, ενώ το σύστημα αξιολογείται πιλοτικά. Παρέχεται υποστήριξη με προμήθεια εξοπλισμού και διάχυση των αποτελεσμάτων.";
+
+"inforView_global_title" = "Διεθνή Συνέδρια";
+
+"inforView_global_subtitle"  = "• Sustainable Smart Agriculture: Plant disease detection with deep learning techniques in cotton cultivation";
+
+"inforView_local_title"  = "Εθνικά Συνέδρια";
+
+"inforView_local_list1" = "• Καταγραφή υψών καλλιεργειών και χαρακτηρισμός καλλιέργειας";
+
+"inforView_local_list2" = "• Εντοπισμός φυτικών ασθενειών με τεχνικές βαθιάς μηχανικής μάθησης, 34ο Πανελλήνιο Συνέδριο Στατιστικής";
+
+"inforView_magazine_title" = "Διεθνή Περιοδικά";
+
+"inforView_magazine_list1"  = "•  Comparative analysis of convolutional neural networks for early diagnosis of plant diseases and pest in a multiclass dataset";
+
+"inforView_magazine_list2"  = "• Smart agriculture: Predictive height analysis for universal crop health classification";
+
+"inforView_magazine_list3"  = "• Transitioning to a Sustainable Smart Agriculture Using Deep Machine Learning Techniques: The Case of a Greek Project";

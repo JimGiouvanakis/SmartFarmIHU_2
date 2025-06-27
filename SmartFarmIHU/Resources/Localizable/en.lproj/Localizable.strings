@@ -18,3 +18,44 @@
 "homeView_button_title" = "Plant Disease Detection";
 
 "homeView_subtitle" = "This project focuses on developing innovative deep learning applications and models for estimating plant growth through image data. We are creating a web application that allows farmers to upload photos of their plants or crops and receive in response, through the trained model, the corresponding layout that will help them make decisions about their growth.";
+
+// MARK: - InformationView
+
+"infoView_smartArgi_title" = "Smart Farm";
+
+"infoView_smartArgi_subtitle"   = "Smart Agriculture, or Intelligent Farming, is a modern approach to traditional agriculture. It combines cutting-edge technologies, sensors and data analysis to optimize agricultural activities.";
+
+"infoView_winnings_title"   = "What do we gain?";
+
+"infoView_winnings_list1" = "• Crop risk is reduced";
+"infoView_winnings_list2" = "• Product quality and performance increase";
+"infoView_winnings_list3" = "• Real-time progress or problem updates";
+
+"infoView_diseases_title" = "Diseases";
+
+"infoView_diseases_list1" = "• They cause a significant reduction in physical and economic productivity";
+
+"infoView_diseases_list2" = "• They can lead to crop loss if not identified and treated promptly.";
+
+"inforView_package_title" = "Work Packages";
+
+"inforView_package_subtitle"  = "The project includes the design of the architecture, the development of deep learning algorithms and their integration into a web application with automation functions. Data quality and security are ensured, while the system is piloted. Support is provided with the procurement of equipment and dissemination of the results.";
+
+"inforView_global_title" = "International Conferences";
+
+"inforView_global_subtitle"  = "• Sustainable Smart Agriculture: Plant disease detection with deep learning techniques in cotton cultivation";
+
+"inforView_local_title"  = "National Conferences";
+
+"inforView_local_list1" = "• Recording crop heights and crop characterization";
+
+"inforView_local_list2" = "• Plant disease detection using deep machine learning techniques, 34th Panhellenic Statistics Conference";
+
+"inforView_magazine_title" = "International Magazines";
+
+"inforView_magazine_list1"  = "•  Comparative analysis of convolutional neural networks for early diagnosis of plant diseases and pest in a multiclass dataset";
+
+"inforView_magazine_list2"  = "• Smart agriculture: Predictive height analysis for universal crop health classification";
+
+"inforView_magazine_list3"  = "• Transitioning to a Sustainable Smart Agriculture Using Deep Machine Learning Techniques: The Case of a Greek Project";
+

@@ -9,9 +9,25 @@ import SwiftUI
 
 struct InformationView: View {
     
+    // MARK: - Properties
+    
     @StateObject var viewModel = InformationViewModel()
     
+    // MARK: - View
+    
     var body: some View {
+        ZStack {
+            self.makeMainView()
+        }
+        .onAppear {
+            self.setUp()
+        }
+    }
+    
+    // MARK: - ViewBuilder
+    
+    @ViewBuilder
+    private func makeMainView() -> some View {
         VStack {
             HStack {
                 
@@ -32,21 +48,17 @@ struct InformationView: View {
             }
         }
         .padding(.vertical,10)
-        .onAppear {
-            viewModel.addDelay()
-        }
     }
     
-    
     @ViewBuilder
-    func makeSmartAgriculture() -> some View {
+    private func makeSmartAgriculture() -> some View {
         VStack {
             VStack {
-                Text(AppTextConstants.SmartAgricultureTitle)
+                Text(ViewStrings.smartAgriTitle.localized)
                     .padding(10)
                     .font(.system(size: 16, weight: .bold))
                 
-                Text(AppTextConstants.SmartAgricultureSubTitle)
+                Text(ViewStrings.smartAgriSubTitle.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
@@ -60,7 +72,7 @@ struct InformationView: View {
             .opacity(viewModel.showFirstItem ? 1 : 0)
             
             
-            Image(AppTextConstants.PlantImage)
+            Image(.plant)
                 .resizable()
                 .frame(width: UIScreen.main.bounds.width - 230,height: 150 )
                 .padding(.top,5)
@@ -70,24 +82,24 @@ struct InformationView: View {
     }
     
     @ViewBuilder
-    func makeWinningsAndDiseases() -> some View {
+    private func makeWinningsAndDiseases() -> some View {
         VStack {
             VStack {
-                Text(AppTextConstants.WinningsTitle)
+                Text(ViewStrings.winningsTitle.localized)
                     .padding(.top,8)
                     .padding(.bottom,1)
                     .font(.system(size: 16, weight: .bold))
                 VStack(alignment: .leading) {
                     
-                    Text(AppTextConstants.WinningsBulletList1)
+                    Text(ViewStrings.winningsList1.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
                     
-                    Text(AppTextConstants.WinningsBulletList1)
+                    Text(ViewStrings.winningsList2.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
                     
-                    Text(AppTextConstants.WinningsBulletList1)
+                    Text(ViewStrings.winningsList3.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
                         .padding(.bottom,10)
@@ -103,17 +115,17 @@ struct InformationView: View {
             .opacity(viewModel.showThirdItem ? 1 : 0)
             
             VStack {
-                Text(AppTextConstants.DiseasesTitle)
+                Text(ViewStrings.deseasesTitle.localized)
                     .padding(.top,8)
                     .padding(.bottom,1)
                     .font(.system(size: 16, weight: .bold))
                 
                 VStack(alignment: .leading) {
-                    Text(AppTextConstants.DiseasesBulletList1)
+                    Text(ViewStrings.deseasesList1.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
                     
-                    Text(AppTextConstants.DiseasesBulletList2)
+                    Text(ViewStrings.deseasesList2.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
                         .padding(.bottom,10)
@@ -130,15 +142,15 @@ struct InformationView: View {
     }
     
     @ViewBuilder
-    func makePackage() -> some View {
+    private func makePackage() -> some View {
         VStack {
-            Text(AppTextConstants.PackageTitle)
+            Text(ViewStrings.packageTitle.localized)
                 .font(.system(size: 16, weight: .bold))
                 .padding(.top,8)
                 .padding(.bottom,1)
             
             VStack {
-                Text(AppTextConstants.PackageSubTitle)
+                Text(ViewStrings.packageSubTitle.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
@@ -154,15 +166,14 @@ struct InformationView: View {
     }
     
     @ViewBuilder
-    func makeGlobalConferences() -> some View {
+    private func makeGlobalConferences() -> some View {
         VStack {
-            
-            Text(AppTextConstants.GlobalConferencesTitle)
-                .padding(8)
-                .font(.system(size: 16, weight: .bold))
+                Text(ViewStrings.globalTitle.localized)
+                    .padding(8)
+                    .font(.system(size: 16, weight: .bold))
             
             VStack(alignment: .leading) {
-                Text(AppTextConstants.GlobalConferencesSubTitle)
+                Text(ViewStrings.globalSubTitle.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
@@ -178,19 +189,19 @@ struct InformationView: View {
     }
     
     @ViewBuilder
-    func makeLocalConferences() -> some View {
+    private func makeLocalConferences() -> some View {
         VStack {
-            Text(AppTextConstants.LocalConferencesTitle)
+            Text(ViewStrings.localTitle.localized)
                 .padding(8)
                 .font(.system(size: 16, weight: .bold))
             
             VStack(alignment: .leading) {
                 
-                Text(AppTextConstants.LocalConferencesBulletList1)
+                Text(ViewStrings.localList1.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                 
-                Text(AppTextConstants.LocalConferencesBulletList2)
+                Text(ViewStrings.localList2.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
@@ -207,23 +218,23 @@ struct InformationView: View {
     }
     
     @ViewBuilder
-    func makeMagaZines() -> some View {
+    private func makeMagaZines() -> some View {
         VStack {
             
-            Text(AppTextConstants.MagazinesTitle)
+            Text(ViewStrings.magazineTitle.localized)
                 .padding(8)
                 .font(.system(size: 16, weight: .bold))
             
             VStack(alignment: .leading) {
-                Text(AppTextConstants.MagazinesBulletList1)
+                Text(ViewStrings.magazineList1.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                 
-                Text(AppTextConstants.MagazinesBulletList2)
+                Text(ViewStrings.magazineList2.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                 
-                Text(AppTextConstants.MagazinesBulletList3)
+                Text(ViewStrings.magazineList3.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
@@ -236,6 +247,52 @@ struct InformationView: View {
         )
         .frame(width: UIScreen.main.bounds.width - 20)
         .opacity(viewModel.showEighthItem ? 1 : 0)
+    }
+    
+    // MARK: - Methods
+    
+    private func setUp() {
+        self.viewModel.addDelay()
+    }
+}
+
+// MARK: - Localization
+
+extension InformationView {
+    enum ViewStrings: String, LocalizableProtocol {
+        
+        //  MARK: - InformationView
+        
+        case smartAgriTitle                           = "infoView_smartArgi_title"
+        case smartAgriSubTitle                        = "infoView_smartArgi_subtitle"
+        
+        case winningsTitle                            = "infoView_winnings_title"
+        case winningsList1                            = "infoView_winnings_list1"
+        case winningsList2                            = "infoView_winnings_list2"
+        case winningsList3                            = "infoView_winnings_list3"
+        
+        case deseasesTitle                            = "infoView_diseases_title"
+        case deseasesList1                            = "infoView_diseases_list1"
+        case deseasesList2                            = "infoView_diseases_list2"
+        
+        case packageTitle                             = "inforView_package_title"
+        case packageSubTitle                          = "inforView_package_subtitle"
+        
+        case globalTitle                              = "inforView_global_title"
+        case globalSubTitle                           = "inforView_global_subtitle"
+        
+        case localTitle                               = "inforView_local_title"
+        case localList1                               = "inforView_local_list1"
+        case localList2                               = "inforView_local_list2"
+        
+        case magazineTitle                            = "inforView_magazine_title"
+        case magazineList1                            = "inforView_magazine_list1"
+        case magazineList2                            = "inforView_magazine_list2"
+        case magazineList3                            = "inforView_magazine_list3"
+          
+        var tableName: String {
+            "Localizable"
+        }
     }
 }
 
