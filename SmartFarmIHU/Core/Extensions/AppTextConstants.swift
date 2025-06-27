@@ -73,17 +73,17 @@ class AppTextConstants {
     
     static var TeamViewTitle: String  = "Ομάδα Έργου"
     
-    static var TeamMembers: [TeamStuct] =
+    static var TeamMembers: [TeamModel] =
     [
-        TeamStuct(image: "Professor1", name: "ΑΛΚΙΒΙΆΔΗΣ ΤΣΙΜΠΊΡΗΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole: "Επιστημονικός Υπεύθυνος του έργου", side: true),
-        TeamStuct(image: "Professor2", name: "ΔΗΜΉΤΡΙΟΣ ΒΑΡΣΆΜΗΣ", academicRole: "ΠΡΟΕΔΡΟΣ ΤΜΗΜΑΤΟΣ, ΑΝΑΠΛΗΡΩΤΗΣ ΚΑΘΗΓΗΤΗΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: false),
-        TeamStuct(image: "Professor3", name: "ΧΑΡΆΛΑΜΠΟΣ ΣΤΡΟΥΘΌΠΟΥΛΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: true),
-        TeamStuct(image: "Professor4", name: "ΧΕΙΛΆΣ ΚΩΣΤΑΝΤΊΝΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: false),
-        TeamStuct(image: "Professor5", name: "ΒΟΛΟΓΙΑΝΝΊΔΗΣ ΣΤΑΎΡΟΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: true),
-        TeamStuct(image: "Professor6", name: "ΚΟΥΓΙΟΥΜΤΖΉΣ ΔΗΜΉΤΡΙΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ ΤΜΉΜΑ ΗΜΜΗΥ, ΑΠΘ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: false),
-        TeamStuct(image: "Professor7", name: "ΠΑΠΑΚΩΝΣΤΑΝΤΊΝΟΣ ΑΠΌΣΤΟΛΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ, ΠΑΝΕΠΙΣΤΉΜΙΟ ΚΎΠΡΟΥ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: true),
-        TeamStuct(image: "Professor8", name: "ΚΟΥΝΆΝΗ ΑΡΙΣΤΈΑ", academicRole: "ΓΕΩΠΌΝΟΣ, ΥΠΟΨΉΦΙΙΑ ΔΙΔΆΚΤΟΡΑΣ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: false),
-        TeamStuct(image: "Professor9", name: "ΑΓΓΕΙΟΠΛΆΣΤΗΣ ΑΘΑΝΆΣΙΟΣ", academicRole: "ΥΠΟΨΗΦΙΟΣ ΔΙΔΑΚΤΟΡΑΣ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: true),
+        TeamModel(image: "Professor1", name: "ΑΛΚΙΒΙΆΔΗΣ ΤΣΙΜΠΊΡΗΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole: "Επιστημονικός Υπεύθυνος του έργου", side: true),
+        TeamModel(image: "Professor2", name: "ΔΗΜΉΤΡΙΟΣ ΒΑΡΣΆΜΗΣ", academicRole: "ΠΡΟΕΔΡΟΣ ΤΜΗΜΑΤΟΣ, ΑΝΑΠΛΗΡΩΤΗΣ ΚΑΘΗΓΗΤΗΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: false),
+        TeamModel(image: "Professor3", name: "ΧΑΡΆΛΑΜΠΟΣ ΣΤΡΟΥΘΌΠΟΥΛΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: true),
+        TeamModel(image: "Professor4", name: "ΧΕΙΛΆΣ ΚΩΣΤΑΝΤΊΝΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: false),
+        TeamModel(image: "Professor5", name: "ΒΟΛΟΓΙΑΝΝΊΔΗΣ ΣΤΑΎΡΟΣ", academicRole: "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ", projectRole:"Ομάδα Τμήματος Μηχανικων Πληροφορικής, Υπολογιστών και Τηλεπικοινωνιών του ΔΙΠΑΕ", side: true),
+        TeamModel(image: "Professor6", name: "ΚΟΥΓΙΟΥΜΤΖΉΣ ΔΗΜΉΤΡΙΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ ΤΜΉΜΑ ΗΜΜΗΥ, ΑΠΘ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: false),
+        TeamModel(image: "Professor7", name: "ΠΑΠΑΚΩΝΣΤΑΝΤΊΝΟΣ ΑΠΌΣΤΟΛΟΣ", academicRole: "ΚΑΘΗΓΗΤΉΣ, ΠΑΝΕΠΙΣΤΉΜΙΟ ΚΎΠΡΟΥ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: true),
+        TeamModel(image: "Professor8", name: "ΚΟΥΝΆΝΗ ΑΡΙΣΤΈΑ", academicRole: "ΓΕΩΠΌΝΟΣ, ΥΠΟΨΉΦΙΙΑ ΔΙΔΆΚΤΟΡΑΣ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: false),
+        TeamModel(image: "Professor9", name: "ΑΓΓΕΙΟΠΛΆΣΤΗΣ ΑΘΑΝΆΣΙΟΣ", academicRole: "ΥΠΟΨΗΦΙΟΣ ΔΙΔΑΚΤΟΡΑΣ", projectRole:"Συνεργαζόμενα μέλη του Έργου", side: true),
     ]
     
 }

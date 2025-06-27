@@ -27,6 +27,7 @@ struct HeaderView: View {
     
     // MARK: - ViewBuilders
     
+    @ViewBuilder
     private func makeMainview() -> some View {
         HStack {
             Button {

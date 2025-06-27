@@ -25,6 +25,9 @@ struct LobbyView: View {
         ZStack {
             self.makeMainView()
         }
+        .onAppear {
+            self.setup()
+        }
     }
     
     // MARK: - ViewBuilders
@@ -39,15 +42,16 @@ struct LobbyView: View {
                 Spacer()
             }
             
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack {
                     if menuSelection == .home {
                         HomeView(menuSelection: $menuSelection, openSheet: $openSheet)
                     } else if menuSelection == .information {
                         InformationView()
                     } else if menuSelection == .team {
-                        TeamView()
-                    }                }
+                        TeamView(teamMembers: viewModel.data)
+                    }
+                }
             }
             
             CustomTabView(menuSelection: $menuSelection)
@@ -63,7 +67,9 @@ struct LobbyView: View {
     
     // MARK: - Methods
     
-    // ..
+    private func setup() {
+        Task { await viewModel.setup() }
+    }
     
 }
 

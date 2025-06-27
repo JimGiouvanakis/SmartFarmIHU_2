@@ -30,6 +30,7 @@ struct HomeView: View {
     
     // MARK: - ViewBuilders
     
+    @ViewBuilder
     private func makeMainview() -> some View {
         VStack {
             Image(.mainHomePagePhoto)

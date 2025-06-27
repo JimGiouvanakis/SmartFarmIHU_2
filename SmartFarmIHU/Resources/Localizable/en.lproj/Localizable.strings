@@ -59,3 +59,44 @@
 
 "inforView_magazine_list3"  = "• Transitioning to a Sustainable Smart Agriculture Using Deep Machine Learning Techniques: The Case of a Greek Project";
 
+// MARK: - TeamView
+
+"teamView_title"  = "Project Team";
+
+// MARK: - TeamMapper
+
+"professor1_name" = "ALKIBIADIS TSIMPIRIS";
+"professor1_academinc_role" = "ASSOCIATE PROFESSOR";
+"professor1_project_role" = "Scientific Project Manager";
+
+"professor2_name" = "DIMITRIOS BARSAMIS";
+"professor2_academinc_role" = "HEAD OF DEPARTMENT";
+"professor2_project_role" = "Team of the Department of Informatics, Computer and Telecommunications Engineering of the IHU";
+
+"professor3_name" = "XARALAMPOS STROUTHOPOULOS";
+"professor3_academinc_role" = "PROFESSOR";
+"professor3_project_role" = "Team of the Department of Informatics, Computer and Telecommunications Engineering of the IHU";
+
+"professor4_name" = "XEILAS KONSTANTINOS";
+"professor4_academinc_role" = "PROFESSOR";
+"professor4_project_role" = "Team of the Department of Informatics, Computer and Telecommunications Engineering of the IHU";
+
+"professor5_name" = "BOLOGIANNIDIS STAVROS";
+"professor5_academinc_role" = "PROFESSOR";
+"professor5_project_role" = "Team of the Department of Informatics, Computer and Telecommunications Engineering of the IHU";
+
+"professor6_name" = "KOUGIOUMTZIS DIMITRIOS";
+"professor6_academinc_role" = "PROFESSOR IN ELECTRICAL AND COMPUTER ENGINEERING, AUTH";
+"professor6_project_role" = "Project Collaborators";
+
+"professor7_name" = "PAPAKOSTANTINOS APOSTOLOS";
+"professor7_academinc_role" = "PROFESSOR, CYPRUS UNIVERSITY";
+"professor7_project_role" = "Project Collaborators";
+
+"professor8_name" = "KOYNANI ARISTEA";
+"professor8_academinc_role" = "AGRICULTURALIST, DOCTORAL CANDIDATE";
+"professor8_project_role" = "Project Collaborators";
+
+"professor9_name" = "AGGEIOPLASTIS ATHANASIOS";
+"professor9_academinc_role" = "DOCTORAL CANDIDATE";
+"professor9_project_role" = "Project Collaborators";

@@ -168,9 +168,9 @@ struct InformationView: View {
     @ViewBuilder
     private func makeGlobalConferences() -> some View {
         VStack {
-                Text(ViewStrings.globalTitle.localized)
-                    .padding(8)
-                    .font(.system(size: 16, weight: .bold))
+            Text(ViewStrings.globalTitle.localized)
+                .padding(8)
+                .font(.system(size: 16, weight: .bold))
             
             VStack(alignment: .leading) {
                 Text(ViewStrings.globalSubTitle.localized)
@@ -289,7 +289,7 @@ extension InformationView {
         case magazineList1                            = "inforView_magazine_list1"
         case magazineList2                            = "inforView_magazine_list2"
         case magazineList3                            = "inforView_magazine_list3"
-          
+        
         var tableName: String {
             "Localizable"
         }
