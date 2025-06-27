@@ -89,5 +89,5 @@ struct CustomTabView: View {
 }
 
 #Preview {
-    LobbyView()
+    LobbyView(resetApp: .constant(true))
 }

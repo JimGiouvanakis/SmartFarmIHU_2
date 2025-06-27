@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  SmartFarmIHU
+
+  Created by Dimitris Giouvanakis on 25/6/25.
+  
+*/
+
+// MARK: - General Texts
+
+"app_title"  = "SmartFarm";
+"app_subTitle" = "Powered by IHU";
+
+// MARK: - HomeView
+
+"homeView_title" = "Implementation and utilization of techniques and solutions derived from Smart Agriculture";
+
+"homeView_button_title" = "Plant Disease Detection";
+
+"homeView_subtitle" = "This project focuses on developing innovative deep learning applications and models for estimating plant growth through image data. We are creating a web application that allows farmers to upload photos of their plants or crops and receive in response, through the trained model, the corresponding layout that will help them make decisions about their growth.";

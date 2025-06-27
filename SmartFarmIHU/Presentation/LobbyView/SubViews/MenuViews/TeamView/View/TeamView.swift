@@ -64,5 +64,5 @@ struct TeamView: View {
 }
 
 #Preview {
-    LobbyView()
+    LobbyView(resetApp: .constant(true))
 }

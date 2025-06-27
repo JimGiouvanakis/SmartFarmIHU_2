@@ -15,10 +15,10 @@ struct SplashScreenView: View {
     
     var body: some View {
         if isActive {
-            LobbyView()
+            LobbyView(resetApp: $isActive)
         } else {
             VStack {
-                VStack {
+                VStack(alignment: .leading) {
                     Text(AppTextConstants.AppTitle)
                         .font(.system(size: 50,weight: .bold))
                         .foregroundColor(Color.App.green)
@@ -27,6 +27,7 @@ struct SplashScreenView: View {
                         .font(.system(size: 25,weight: .bold))
                         .foregroundColor(Color.App.green)
                         .opacity(0.6)
+                        .padding(.leading, 8)
                 }
                 .scaleEffect(size)
                 .opacity(opacity)
@@ -40,6 +41,8 @@ struct SplashScreenView: View {
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
                     self.isActive = true
+                    self.size = 0.6
+                    self.opacity = 0.5
                 }
             }
         }

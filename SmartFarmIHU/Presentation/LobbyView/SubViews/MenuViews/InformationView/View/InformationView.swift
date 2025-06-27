@@ -240,5 +240,5 @@ struct InformationView: View {
 }
 
 #Preview {
-    LobbyView()
+    LobbyView(resetApp: .constant(true))
 }

@@ -10,16 +10,30 @@ import SwiftUI
 
 struct LobbyView: View {
     
+    // MARK: - Properties
+    
     @StateObject var viewModel = LobbyViewModel()
     
     @State var menuSelection: MenuSelection = .home
+    @Binding var resetApp: Bool
     
     @State var openSheet: Bool = false
     
+    // MARK: - View
+    
     var body: some View {
+        ZStack {
+            self.makeMainView()
+        }
+    }
+    
+    // MARK: - ViewBuilders
+    
+    private func makeMainView() -> some View {
         VStack {
+            
             HStack {
-                HeaderView(menuSelection: $menuSelection)
+                HeaderView(resetApp: $resetApp, menuSelection: $menuSelection)
                     .padding(.top,50)
                 
                 Spacer()
@@ -35,6 +49,7 @@ struct LobbyView: View {
                         TeamView()
                     }                }
             }
+            
             CustomTabView(menuSelection: $menuSelection)
         }
         .padding(10)
@@ -45,8 +60,13 @@ struct LobbyView: View {
                 .ignoresSafeArea()
         }
     }
+    
+    // MARK: - Methods
+    
+    // ..
+    
 }
 
 #Preview {
-    LobbyView()
+    LobbyView(resetApp: .constant(true))
 }
