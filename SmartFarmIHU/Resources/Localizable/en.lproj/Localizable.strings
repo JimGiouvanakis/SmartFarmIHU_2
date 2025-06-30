@@ -11,6 +11,8 @@
 "app_title"  = "SmartFarm";
 "app_subTitle" = "Powered by IHU";
 
+"app_languTitle" = "Greek";
+
 // MARK: - HomeView
 
 "homeView_title" = "Implementation and utilization of techniques and solutions derived from Smart Agriculture";

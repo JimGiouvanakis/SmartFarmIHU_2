@@ -24,6 +24,7 @@ struct SplashView: View {
             
             self.makeMainView()
         }
+        .ignoresSafeArea()
     }
     
     // MARK: - ViewBuilders

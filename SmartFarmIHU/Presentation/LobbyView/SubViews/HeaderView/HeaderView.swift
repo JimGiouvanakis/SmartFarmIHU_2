@@ -62,7 +62,10 @@ struct HeaderView: View {
                 AppViewModel.shared.changeLangu()
                 self.resetApp = false
             } label: {
-                Text("Language")
+                Text(ViewStrings.languTitle.localized)
+                    .font(.system(size: 18,weight: .regular))
+                    .foregroundColor(Color.App.green)
+                    .padding(.trailing,8)
             }
         }
         .padding(.horizontal)
@@ -82,6 +85,7 @@ extension HeaderView {
         
         case appTitle                           = "app_title"
         case subTitle                           = "app_subTitle"
+        case languTitle                         = "app_languTitle"
         
         var tableName: String {
             "Localizable"

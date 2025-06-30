@@ -11,6 +11,8 @@
 "app_title"  = "SmartFarm";
 "app_subTitle" = "Powered by IHU";
 
+"app_languTitle" = "Αγγλικά";
+
 // MARK: - HomeView
 
 "homeView_title" = "Εφαρμογή και αξιοποίηση τεχνικών και λύσεων που προέρχονται από την Έξυπνη Γεωργία";
