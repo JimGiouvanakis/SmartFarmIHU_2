@@ -113,6 +113,7 @@ struct TeamView: View {
                 HStack {
                     Text(member.academicRole)
                         .font(.system(size: 12))
+                        .foregroundColor(Color.App.black)
                     
                     Spacer()
                 }
@@ -120,6 +121,7 @@ struct TeamView: View {
                 HStack {
                     Text(member.projectRole)
                         .font(.system(size: 10))
+                        .foregroundColor(Color.App.black)
                     Spacer()
                 }
             }

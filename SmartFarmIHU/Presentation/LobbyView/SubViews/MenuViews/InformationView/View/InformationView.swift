@@ -31,20 +31,20 @@ struct InformationView: View {
         VStack {
             HStack {
                 
-                makeSmartAgriculture()
+                self.makeSmartAgriculture()
                 
-                makeWinningsAndDiseases()
+                self.makeWinningsAndDiseases()
             }
             
-            makePackage()
+            self.makePackage()
             
             VStack {
                 HStack {
-                    makeGlobalConferences()
+                    self.makeGlobalConferences()
                     
-                    makeLocalConferences()
+                    self.makeLocalConferences()
                 }
-                makeMagaZines()
+                self.makeMagaZines()
             }
         }
         .padding(.vertical,10)
@@ -57,11 +57,13 @@ struct InformationView: View {
                 Text(ViewStrings.smartAgriTitle.localized)
                     .padding(10)
                     .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(Color.App.black)
                 
                 Text(ViewStrings.smartAgriSubTitle.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
+                    .foregroundColor(Color.App.black)
             }
             .background (
                 RoundedRectangle(cornerRadius: 20)
@@ -89,20 +91,25 @@ struct InformationView: View {
                     .padding(.top,8)
                     .padding(.bottom,1)
                     .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(Color.App.black)
+                
                 VStack(alignment: .leading) {
                     
                     Text(ViewStrings.winningsList1.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
+                        .foregroundColor(Color.App.black)
                     
                     Text(ViewStrings.winningsList2.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
+                        .foregroundColor(Color.App.black)
                     
                     Text(ViewStrings.winningsList3.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
                         .padding(.bottom,10)
+                        .foregroundColor(Color.App.black)
                 }
             }
             .frame(width: UIScreen.main.bounds.width - 220)
@@ -119,16 +126,19 @@ struct InformationView: View {
                     .padding(.top,8)
                     .padding(.bottom,1)
                     .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(Color.App.black)
                 
                 VStack(alignment: .leading) {
                     Text(ViewStrings.deseasesList1.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
+                        .foregroundColor(Color.App.black)
                     
                     Text(ViewStrings.deseasesList2.localized)
                         .font(.system(size: 14, weight: .regular))
                         .padding(.horizontal,10)
                         .padding(.bottom,10)
+                        .foregroundColor(Color.App.black)
                 }
             }
             .background (
@@ -148,12 +158,14 @@ struct InformationView: View {
                 .font(.system(size: 16, weight: .bold))
                 .padding(.top,8)
                 .padding(.bottom,1)
+                .foregroundColor(Color.App.black)
             
             VStack {
                 Text(ViewStrings.packageSubTitle.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
+                    .foregroundColor(Color.App.black)
             }
         }
         .background (
@@ -171,12 +183,14 @@ struct InformationView: View {
             Text(ViewStrings.globalTitle.localized)
                 .padding(8)
                 .font(.system(size: 16, weight: .bold))
+                .foregroundColor(Color.App.black)
             
             VStack(alignment: .leading) {
                 Text(ViewStrings.globalSubTitle.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
+                    .foregroundColor(Color.App.black)
             }
         }
         .background (
@@ -194,17 +208,20 @@ struct InformationView: View {
             Text(ViewStrings.localTitle.localized)
                 .padding(8)
                 .font(.system(size: 16, weight: .bold))
+                .foregroundColor(Color.App.black)
             
             VStack(alignment: .leading) {
                 
                 Text(ViewStrings.localList1.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
+                    .foregroundColor(Color.App.black)
                 
                 Text(ViewStrings.localList2.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
+                    .foregroundColor(Color.App.black)
             }
         }
         .frame(width: UIScreen.main.bounds.width - 220)
@@ -224,20 +241,24 @@ struct InformationView: View {
             Text(ViewStrings.magazineTitle.localized)
                 .padding(8)
                 .font(.system(size: 16, weight: .bold))
+                .foregroundColor(Color.App.black)
             
             VStack(alignment: .leading) {
                 Text(ViewStrings.magazineList1.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
+                    .foregroundColor(Color.App.black)
                 
                 Text(ViewStrings.magazineList2.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
+                    .foregroundColor(Color.App.black)
                 
                 Text(ViewStrings.magazineList3.localized)
                     .font(.system(size: 14, weight: .regular))
                     .padding(.horizontal,10)
                     .padding(.bottom,10)
+                    .foregroundColor(Color.App.black)
             }
         }
         .background (

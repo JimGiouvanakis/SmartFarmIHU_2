@@ -64,8 +64,8 @@ struct HeaderView: View {
             } label: {
                 Text("Language")
             }
-            
         }
+        .padding(.horizontal)
     }
     
     // MARK: - Methods

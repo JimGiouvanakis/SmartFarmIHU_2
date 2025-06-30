@@ -45,6 +45,10 @@ extension Color {
             Color(hex: "#ffffff")
         }
         
+        static var black: Color {
+            Color(hex: "#000000")
+        }
+        
         static var green: Color {
             Color(hex: "#0e8747")
         }

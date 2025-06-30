@@ -21,7 +21,7 @@ struct SplashView: View {
         ZStack {
             
             Color.App.white
-                
+            
             self.makeMainView()
         }
     }
