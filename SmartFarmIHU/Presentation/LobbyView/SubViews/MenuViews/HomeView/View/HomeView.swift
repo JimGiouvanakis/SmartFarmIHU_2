@@ -66,7 +66,7 @@ struct HomeView: View {
                 .font(.system(size: 16))
                 .foregroundColor(Color.App.gray)
         }
-        .padding([.leading,.trailing])
+        .padding(.vertical,10)
         .opacity(viewModel.isViewed ? 1 : 0)
     }
     

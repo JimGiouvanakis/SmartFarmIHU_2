@@ -70,7 +70,7 @@ struct InformationView: View {
                     .fill(Color.App.backgroundGreen)
                     .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
             )
-            .frame(width: UIScreen.main.bounds.width - 220)
+            .frame(width: UIScreen.main.bounds.width * 0.45)
             .opacity(viewModel.showFirstItem ? 1 : 0)
             
             
@@ -112,7 +112,7 @@ struct InformationView: View {
                         .foregroundColor(Color.App.black)
                 }
             }
-            .frame(width: UIScreen.main.bounds.width - 220)
+            .frame(width: UIScreen.main.bounds.width * 0.45)
             .cornerRadius(20)
             .overlay(
                 RoundedRectangle(cornerRadius: 20)
@@ -146,7 +146,7 @@ struct InformationView: View {
                     .fill(Color.App.backgroundGreen3)
                     .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
             )
-            .frame(width: UIScreen.main.bounds.width - 220)
+            .frame(width: UIScreen.main.bounds.width * 0.45)
             .opacity(viewModel.showSecondItem ? 1 : 0)
         }
     }
@@ -173,7 +173,7 @@ struct InformationView: View {
                 .fill(Color.App.backgroundGreen2)
                 .shadow(color: Color.App.gray.opacity(0.5), radius: 3, x: 3, y: 5)
         )
-        .frame(width: UIScreen.main.bounds.width - 20)
+        .frame(width: UIScreen.main.bounds.width * 0.95)
         .opacity(viewModel.showFifthItem ? 1 : 0)
     }
     
@@ -198,7 +198,7 @@ struct InformationView: View {
                 .fill(Color.App.backgroundGreen3)
                 .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
         )
-        .frame(width: UIScreen.main.bounds.width - 220)
+        .frame(width: UIScreen.main.bounds.width * 0.45)
         .opacity(viewModel.showSeventhItem ? 1 : 0)
     }
     
@@ -224,7 +224,7 @@ struct InformationView: View {
                     .foregroundColor(Color.App.black)
             }
         }
-        .frame(width: UIScreen.main.bounds.width - 220)
+        .frame(width: UIScreen.main.bounds.width * 0.45)
         .cornerRadius(20)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
@@ -266,7 +266,7 @@ struct InformationView: View {
                 .fill(Color.App.backgroundGreen)
                 .shadow(color: Color.App.green.opacity(0.5), radius: 3, x: 3, y: 5)
         )
-        .frame(width: UIScreen.main.bounds.width - 20)
+        .frame(width: UIScreen.main.bounds.width  * 0.95)
         .opacity(viewModel.showEighthItem ? 1 : 0)
     }
     

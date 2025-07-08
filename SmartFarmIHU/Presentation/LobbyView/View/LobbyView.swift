@@ -16,7 +16,7 @@ struct LobbyView: View {
     
     @StateObject private var monitor = Monitor()
     
-    @State var menuSelection: MenuSelection = .home
+    @State var menuSelection: MenuSelection = .information
     @Binding var resetApp: Bool
     
     @State var openSheet: Bool = false
