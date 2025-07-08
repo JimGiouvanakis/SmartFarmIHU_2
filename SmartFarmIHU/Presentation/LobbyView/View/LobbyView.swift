@@ -12,7 +12,9 @@ struct LobbyView: View {
     
     // MARK: - Properties
     
-    @StateObject var viewModel = LobbyViewModel()
+    @StateObject private var viewModel = LobbyViewModel()
+    
+    @StateObject private var monitor = Monitor()
     
     @State var menuSelection: MenuSelection = .home
     @Binding var resetApp: Bool
@@ -27,6 +29,9 @@ struct LobbyView: View {
         }
         .onAppear {
             self.setup()
+        }
+        .fullScreenCover(isPresented: $monitor.noInternet) {
+            Text("No Internet Connection")
         }
     }
     
