@@ -17,13 +17,10 @@ struct WebView: UIViewRepresentable {
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
         
-        let url = URL(string: "https://smartfarm.ict.ihu.gr/plants/")
+        let url = URL(staticString: "https://smartfarm.ict.ihu.gr/plants/")
         
-        if let url = url {
-            
-            let request = URLRequest(url: url)
-            uiView.load(request)
-        }
+        let request = URLRequest(url: url)
+        uiView.load(request)
     }
 }
- 
+
