@@ -76,7 +76,7 @@ struct InformationView: View {
             
             Image(.plant)
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width - 230,height: 150 )
+                .frame(width: UIScreen.main.bounds.width * 0.45,height: 150 )
                 .padding(.top,5)
                 .cornerRadius(20)
                 .opacity(viewModel.showFourthItem ? 1 : 0)

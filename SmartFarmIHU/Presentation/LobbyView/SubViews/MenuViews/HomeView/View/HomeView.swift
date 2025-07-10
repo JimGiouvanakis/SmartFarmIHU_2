@@ -35,7 +35,7 @@ struct HomeView: View {
         VStack {
             Image(.mainHomePagePhoto)
                 .resizable()
-                .frame(width: UIScreen.main.bounds.width - 50, height: 450)
+                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.6)
                 .cornerRadius(20)
                 .padding(.vertical)
             
@@ -43,15 +43,16 @@ struct HomeView: View {
                 .font(.system(size: 17))
                 .foregroundColor(Color.App.green)
                 .padding(.bottom, 10)
+                .padding(.horizontal,10)
             
             Button(action: {
                 openSheet.toggle()
             }, label: {
                 Text(ViewStrings.buttonTitle.localized)
                     .font(.system(size: 19,weight: .bold))
-                    .frame(width: UIScreen.main.bounds.width - 50)
-                    .frame(height: 60)
+                    .frame(width: UIScreen.main.bounds.width * 0.8,height: 60)
                     .foregroundColor(Color.white)
+    
                 
             })
             .background(
@@ -65,8 +66,11 @@ struct HomeView: View {
             Text(ViewStrings.subTitle.localized)
                 .font(.system(size: 16))
                 .foregroundColor(Color.App.gray)
+                .padding(.horizontal,10)
+            
         }
         .padding(.vertical,10)
+        .padding(.horizontal,10)
         .opacity(viewModel.isViewed ? 1 : 0)
     }
     

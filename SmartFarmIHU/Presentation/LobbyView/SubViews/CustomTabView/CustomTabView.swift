@@ -82,7 +82,7 @@ struct CustomTabView: View {
             }
         }
         .padding(.horizontal, 25)
-        .frame(width: 400,height: 50)
+        .frame(width: UIScreen.main.bounds.width ,height: 50)
         .background(Color.white)
         
     }

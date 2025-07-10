@@ -16,7 +16,7 @@ struct LobbyView: View {
     
     @StateObject private var monitor = Monitor()
     
-    @State var menuSelection: MenuSelection = .information
+    @State var menuSelection: MenuSelection = .home
     @Binding var resetApp: Bool
     
     @State var openSheet: Bool = false
@@ -39,13 +39,13 @@ struct LobbyView: View {
     
     private func makeMainView() -> some View {
         VStack {
-            
             HStack {
                 HeaderView(resetApp: $resetApp, menuSelection: $menuSelection)
-                    .padding(.top,50)
+                    .padding(.top)
                 
                 Spacer()
             }
+            .padding(.top)
             
             ScrollView(showsIndicators: false) {
                 VStack {
@@ -62,7 +62,6 @@ struct LobbyView: View {
             CustomTabView(menuSelection: $menuSelection)
         }
         .padding(10)
-        .ignoresSafeArea()
         .background(.white)
         .sheet(isPresented: $openSheet) {
             WebView()
