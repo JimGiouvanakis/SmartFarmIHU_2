@@ -39,13 +39,8 @@ struct LobbyView: View {
     
     private func makeMainView() -> some View {
         VStack {
-            HStack {
-                HeaderView(resetApp: $resetApp, menuSelection: $menuSelection)
-                    .padding(.top)
-                
-                Spacer()
-            }
-            .padding(.top)
+            
+            HeaderView(resetApp: $resetApp, menuSelection: $menuSelection)
             
             ScrollView(showsIndicators: false) {
                 VStack {

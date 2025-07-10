@@ -21,10 +21,11 @@ struct SplashView: View {
         ZStack {
             
             Color.App.white
+                .ignoresSafeArea()
             
             self.makeMainView()
         }
-        .ignoresSafeArea()
+        .ignoresSafeArea(.all , edges: .bottom)
     }
     
     // MARK: - ViewBuilders
