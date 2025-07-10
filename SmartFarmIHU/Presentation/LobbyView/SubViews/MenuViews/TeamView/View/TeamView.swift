@@ -69,7 +69,8 @@ struct TeamView: View {
     @ViewBuilder
     private func makeMembers() -> some View {
         ForEach(self.teamMembers, id: \.id) { member in
-            self.makeMember(member)
+//            self.makeMember(member)
+            self.makeNewMember(member)
                 .padding(.leading, member.side ? 0 : 20)
                 .padding(.trailing, member.side ? 20 : 0)
                 .offset(x: member.side ? viewRightOffset : viewLeftOffset)
@@ -92,7 +93,7 @@ struct TeamView: View {
             if member.side {
                 Image(member.image)
                     .resizable()
-                    .frame(width: UIScreen.main.bounds.width * 0.3 ,height: UIScreen.main.bounds.height * 0.13)
+                    .aspectRatio(contentMode: .fit)
                     .cornerRadius(20)
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -130,10 +131,11 @@ struct TeamView: View {
             if member.side == false {
                 Image(member.image)
                     .resizable()
-                    .frame(width: 120,height: 120)
+                    .aspectRatio(contentMode: .fit)
                     .cornerRadius(20)
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
+                            .aspectRatio(contentMode: .fit)
                             .foregroundColor(Color.clear)
                     )
             }
@@ -145,6 +147,68 @@ struct TeamView: View {
                 .shadow(color: Color.App.green.opacity(1), radius: 3, x: 3, y: 5)
         )
         .padding(.horizontal)
+    }
+    
+    @ViewBuilder
+    private func makeNewMember(_ member: LobbyView.UIModel) -> some View {
+        RoundedRectangle(cornerRadius: 20)
+            .stroke(Color.App.gray, lineWidth: 1)
+            .shadow(color: Color.App.green.opacity(1), radius: 3, x: 3, y: 5)
+            .aspectRatio(3,contentMode: .fit)
+            .overlay {
+                HStack {
+                    if member.side {
+                        Image(member.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(20)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .foregroundColor(Color.clear)
+                            )
+                    }
+                    
+                    VStack(spacing: 5) {
+                        HStack {
+                            Text(member.name)
+                                .bold()
+                                .font(.system(size: 16))
+                                .foregroundColor(Color.App.green)
+                            
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text(member.academicRole)
+                                .font(.system(size: 12))
+                                .foregroundColor(Color.App.black)
+                            
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text(member.projectRole)
+                                .font(.system(size: 10))
+                                .foregroundColor(Color.App.black)
+                            Spacer()
+                        }
+                    }
+                    .padding(.leading)
+                    
+                    if member.side == false {
+                        Image(member.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(20)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(Color.clear)
+                            )
+                    }
+                }
+            }
+            .padding(.horizontal)
     }
     
     // MARK: - Methods
