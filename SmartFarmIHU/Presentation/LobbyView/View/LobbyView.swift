@@ -31,7 +31,7 @@ struct LobbyView: View {
             self.setup()
         }
         .fullScreenCover(isPresented: $monitor.noInternet) {
-            Text("No Internet Connection")
+            NoNetworkView()
         }
     }
     

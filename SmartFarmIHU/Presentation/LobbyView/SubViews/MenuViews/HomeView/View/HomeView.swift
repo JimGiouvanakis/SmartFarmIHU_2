@@ -64,7 +64,7 @@ struct HomeView: View {
             .padding(.bottom, 10)
             
             Text(ViewStrings.subTitle.localized)
-                .font(.system(size: 16))
+                .font(.system(size: 17))
                 .foregroundColor(Color.App.gray)
                 .padding(.horizontal,10)
             
