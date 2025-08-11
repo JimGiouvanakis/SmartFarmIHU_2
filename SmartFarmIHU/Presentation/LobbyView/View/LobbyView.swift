@@ -59,8 +59,26 @@ struct LobbyView: View {
         .padding(10)
         .background(.white)
         .sheet(isPresented: $openSheet) {
-            WebView()
-                .ignoresSafeArea()
+            ZStack(alignment: .top) {
+                
+                WebView()
+                    .ignoresSafeArea()
+                
+                HStack {
+                    
+                    Spacer()
+                    
+                    Button {
+                        openSheet.toggle()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(Color.blue)
+                            .padding()
+                            .bold()
+                    }
+                    .padding(8)
+                }
+            }
         }
     }
     
