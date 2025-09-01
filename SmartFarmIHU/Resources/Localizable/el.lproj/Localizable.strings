@@ -67,7 +67,6 @@
 
 // MARK: - TeamMapper
 
-
 "professor1_name" = "ΑΛΚΙΒΙΆΔΗΣ ΤΣΙΜΠΊΡΗΣ";
 "professor1_academinc_role" = "ΑΝΑΠΛΗΡΩΤΉΣ ΚΑΘΗΓΗΤΉΣ";
 "professor1_project_role" = "Επιστημονικός Υπεύθυνος του έργου";
@@ -103,3 +102,10 @@
 "professor9_name" = "ΑΓΓΕΙΟΠΛΆΣΤΗΣ ΑΘΑΝΆΣΙΟΣ";
 "professor9_academinc_role" = "Συνεργαζόμενα μέλη του Έργου";
 "professor9_project_role" = "ΥΠΟΨΗΦΙΟΣ ΔΙΔΑΚΤΟΡΑΣ";
+
+// MARK: - NoNetworkView
+
+"noNetwork_subTitle1" = "Δεν υπάρχη σύνδεση στο Διαδύκτιο";
+"noNetwork_subTitle2" = "Παρακαλώ προσπαθήστε ξανά";
+
+"noNetwork_buttonText" = "Προσπαθήστε ξανά";

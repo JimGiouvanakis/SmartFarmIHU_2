@@ -102,3 +102,10 @@
 "professor9_name" = "AGGEIOPLASTIS ATHANASIOS";
 "professor9_academinc_role" = "DOCTORAL CANDIDATE";
 "professor9_project_role" = "Project Collaborators";
+
+// MARK: - NoNetworkView
+
+"noNetwork_subTitle1" = "No internet connection";
+"noNetwork_subTitle2" = "Please try again";
+
+"noNetwork_buttonText" = "Try again";

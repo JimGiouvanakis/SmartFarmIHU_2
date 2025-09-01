@@ -44,12 +44,12 @@ struct NoNetworkView: View {
             }
             .padding(.bottom)
             
-            Text("No internet connection")
+            Text(ViewStrings.internetTitle.localized)
                 .font(.system(size: 20,weight: .bold))
                 .foregroundColor(Color.App.green)
                 .padding(.top)
             
-            Text("Please try again")
+            Text(ViewStrings.internetsubTitle.localized)
                 .font(.system(size: 20,weight: .bold))
                 .foregroundColor(Color.App.green)
             
@@ -63,7 +63,7 @@ struct NoNetworkView: View {
                         self.buttonTapped = true
                     }
                 } label: {
-                    Text("Try again")
+                    Text(ViewStrings.buttonText.localized)
                         .padding(.vertical,20)
                         .foregroundColor(Color.App.white)
                         .font(.system(size: 25,weight: .bold))
@@ -98,6 +98,11 @@ extension NoNetworkView {
         
         case title                              = "app_title"
         case subtitle                           = "app_subTitle"
+        
+        case internetTitle                      = "noNetwork_subTitle1"
+        case internetsubTitle                      = "noNetwork_subTitle2"
+        
+        case buttonText                      = "noNetwork_buttonText"
         
         var tableName: String {
             "Localizable"
