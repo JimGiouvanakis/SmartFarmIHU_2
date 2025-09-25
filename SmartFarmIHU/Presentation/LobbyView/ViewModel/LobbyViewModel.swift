@@ -12,6 +12,11 @@ class LobbyViewModel: ObservableObject {
     
     @Published var buttonIcon: Bool = false
     
+    @Published var showModal: Bool = false
+    
+    @Published var showLanguButton: Bool = false
+    @Published var showPrivacyButton: Bool = false
+    
     private var teamUseCase = TeamUseCase()
     
     var data: [LobbyView.UIModel] = []
@@ -24,6 +29,19 @@ class LobbyViewModel: ObservableObject {
                 self.data = self.makeTeamUImodel(data)
             case .failure(let error):
                 print("error \(error)")
+            }
+        }
+    }
+    
+    
+    func addDelay() {
+        withAnimation {
+            self.showLanguButton.toggle()
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+            withAnimation {
+                self.showPrivacyButton.toggle()
             }
         }
     }

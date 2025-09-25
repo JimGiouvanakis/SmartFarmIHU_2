@@ -7,10 +7,9 @@
 
 import Foundation
 
-class AppViewModel {
-    
-    static var shared = AppViewModel()
-    private init() {}
+class AppViewModel: ObservableObject {
+
+    init() {}
     
     @Published var appLanguage: AppLanguage = {
         if let currentLangu = Locale.preferredLanguages.first {

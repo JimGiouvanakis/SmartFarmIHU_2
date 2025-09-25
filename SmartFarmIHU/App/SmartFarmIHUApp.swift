@@ -10,9 +10,12 @@ import SwiftUI
 @main
 struct SmartFarmIHUApp: App {
     
+    @StateObject private var appViewModel: AppViewModel = .init()
+    
     var body: some Scene {
         WindowGroup {
             SplashView()
+                .environment(\.appViewModel, appViewModel)
         }
     }
 }

@@ -12,7 +12,9 @@ struct LobbyView: View {
     
     // MARK: - Properties
     
-    @StateObject private var viewModel = LobbyViewModel()
+    @Environment(\.appViewModel) private var appViewModel
+    
+    @StateObject private var viewModel: LobbyViewModel = .init()
     
     @StateObject private var monitor = Monitor()
     
@@ -30,34 +32,12 @@ struct LobbyView: View {
         .onAppear {
             self.setup()
         }
+        .onChange(of: viewModel.showModal) { _ in
+            viewModel.addDelay()
+        }
         .fullScreenCover(isPresented: $monitor.noInternet) {
             NoNetworkView()
         }
-    }
-    
-    // MARK: - ViewBuilders
-    
-    private func makeMainView() -> some View {
-        VStack {
-            
-            HeaderView(resetApp: $resetApp, menuSelection: $menuSelection)
-            
-            ScrollView(showsIndicators: false) {
-                VStack {
-                    if menuSelection == .home {
-                        HomeView(menuSelection: $menuSelection, openSheet: $openSheet)
-                    } else if menuSelection == .information {
-                        InformationView()
-                    } else if menuSelection == .team {
-                        TeamView(teamMembers: viewModel.data)
-                    }
-                }
-            }
-            
-            CustomTabView(menuSelection: $menuSelection)
-        }
-        .padding(10)
-        .background(.white)
         .sheet(isPresented: $openSheet) {
             ZStack(alignment: .top) {
                 
@@ -82,12 +62,113 @@ struct LobbyView: View {
         }
     }
     
+    // MARK: - ViewBuilders
+    
+    private func makeMainView() -> some View {
+        VStack {
+            
+            HeaderView(menuSelection: $menuSelection, showModal: $viewModel.showModal)
+            
+            ZStack(alignment: .topTrailing) {
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        if menuSelection == .home {
+                            HomeView(menuSelection: $menuSelection, openSheet: $openSheet)
+                        } else if menuSelection == .information {
+                            InformationView()
+                        } else if menuSelection == .team {
+                            TeamView(teamMembers: viewModel.data)
+                        }
+                    }
+                }
+                
+                self.makeSettingModal()
+            }
+            
+            CustomTabView(menuSelection: $menuSelection)
+        }
+        .padding(10)
+        .background(.white)
+    }
+    
+    @ViewBuilder
+    private func makeSettingModal() -> some View {
+        VStack(spacing: 0) {
+            if viewModel.showLanguButton {
+                VStack {
+                    Button {
+                        withAnimation {
+                            appViewModel.changeLangu()
+                            self.resetApp.toggle()
+                        }
+                    } label: {
+                        Text(ViewStrings.languTitle.localized)
+                            .foregroundColor(Color.App.green)
+                            .padding(10)
+                    }
+                    
+                    Divider()
+                        .frame(width: UIScreen.main.bounds.width * 0.2)
+                }
+                .transition(.move(edge: .top).combined(with: .opacity))
+            }
+            
+            
+            if viewModel.showPrivacyButton {
+                VStack {
+                    Button {
+                        // ..
+                    } label: {
+                        Text("Privacy")
+                            .foregroundColor(Color.App.green)
+                            .padding(10)
+                    }
+                    
+                    Divider()
+                        .frame(width: UIScreen.main.bounds.width * 0.2)
+                }
+                .transition(.move(edge: .top).combined(with: .opacity))
+            }
+        }
+        .background(
+            Rectangle()
+                .fill(Color.white)
+                .opacity(0.8)
+        )
+        
+        
+    }
+    
+    @ViewBuilder
+    private func makeButton() -> some View {
+        VStack {
+            
+        }
+        .transition(.move(edge: .top).combined(with: .opacity))
+        
+    }
+    
     // MARK: - Methods
     
     private func setup() {
         Task { await viewModel.setup() }
     }
     
+}
+
+// MARK: - Localization
+
+extension LobbyView {
+    enum ViewStrings: String, LocalizableProtocol {
+        
+        //  MARK: - HeaderView
+        
+        case languTitle                         = "app_languTitle"
+        
+        var tableName: String {
+            "Localizable"
+        }
+    }
 }
 
 #Preview {
