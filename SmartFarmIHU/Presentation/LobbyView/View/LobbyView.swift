@@ -21,7 +21,8 @@ struct LobbyView: View {
     @State var menuSelection: MenuSelection = .home
     @Binding var resetApp: Bool
     
-    @State var openSheet: Bool = false
+    @State var openWebView: Bool = false
+    @State var openPrivacy: Bool = false
     
     // MARK: - View
     
@@ -38,7 +39,7 @@ struct LobbyView: View {
         .fullScreenCover(isPresented: $monitor.noInternet) {
             NoNetworkView()
         }
-        .sheet(isPresented: $openSheet) {
+        .sheet(isPresented: $openWebView) {
             ZStack(alignment: .top) {
                 
                 WebView()
@@ -49,7 +50,9 @@ struct LobbyView: View {
                     Spacer()
                     
                     Button {
-                        openSheet.toggle()
+                        withAnimation {
+                            openWebView.toggle()
+                        }
                     } label: {
                         Image(systemName: "xmark")
                             .foregroundColor(Color.blue)
@@ -57,6 +60,31 @@ struct LobbyView: View {
                             .bold()
                     }
                     .padding(8)
+                }
+            }
+        }
+        .sheet(isPresented: $openPrivacy) {
+                ScrollView(showsIndicators: false) {
+                    ZStack(alignment: .top) {
+                    PrivacyView()
+                        .ignoresSafeArea()
+                    
+                    HStack {
+                        
+                        Spacer()
+                        
+                        Button {
+                            withAnimation {
+                                openPrivacy.toggle()
+                            }
+                        } label: {
+                            Image(systemName: "xmark")
+                                .foregroundColor(Color.blue)
+                                .padding()
+                                .bold()
+                        }
+                        .padding(8)
+                    }
                 }
             }
         }
@@ -73,7 +101,7 @@ struct LobbyView: View {
                 ScrollView(showsIndicators: false) {
                     VStack {
                         if menuSelection == .home {
-                            HomeView(menuSelection: $menuSelection, openSheet: $openSheet)
+                            HomeView(menuSelection: $menuSelection, openSheet: $openWebView)
                         } else if menuSelection == .information {
                             InformationView()
                         } else if menuSelection == .team {
@@ -117,7 +145,10 @@ struct LobbyView: View {
             if viewModel.showPrivacyButton {
                 VStack {
                     Button {
-                        // ..
+                        withAnimation {
+                            viewModel.addDelay()
+                            self.openPrivacy.toggle()
+                        }
                     } label: {
                         Text("Privacy")
                             .foregroundColor(Color.App.green)
