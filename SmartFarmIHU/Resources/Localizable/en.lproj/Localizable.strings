@@ -109,3 +109,21 @@
 "noNetwork_subTitle2" = "Please try again";
 
 "noNetwork_buttonText" = "Try again";
+
+// MARK: - PrivacyView
+
+"privacyView_title1" = "Privacy Policy";
+"privacyView_text1" = "This Privacy Policy governs your use of the application SmartFarm for mobile devices that was created by International Hellenic University.";
+
+"privacyView_title2" = "What Information Does the Application Obtain?";
+"privacyView_text2" =  "The Application uses your device's camera. We do not collect, store, or transmit any photos or videos taken with the Application. All images and video are saved locally on your device's photo library only at your request.";
+
+"privacyView_title3" = "Does the Application Collect Location or Other Personal Data?";
+"privacyView_text3" =  "No. The Application does not collect or transmit any personally identifiable information about you, such as your name, email address, or location. We do not use any third-party analytics or advertising services that would track your usage or collect data.";
+
+"privacyView_title4" = "What are my opt-out rights?";
+"privacyView_text4" =  "You can stop all collection of information by the Application easily by uninstalling the Application. You may use the standard uninstall processes as may be available as part of your mobile device or mobile application marketplace or network. You can also revoke camera access for the Application at any time through your device's settings.";
+
+"privacyView_title5" = "Contact Us";
+"privacyView_text5" = "If you have any questions regarding privacy while using the Application, or have questions about our practices, please contact us via email at info@ict.ihu.gr.";
+
